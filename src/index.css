@@ -1,13 +1,139 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.card
+{
+	display:flex;
+	border:1px solid grey;
+	padding: .5rem;
+	border-radius: 1rem;
+	width: 15rem;
+	height: 10rem;
+	align-items: center;
+	margin:1rem 2rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.card img
+{
+	width: 5rem;
+	height: 8rem;
+	margin-right: 2rem;
+}
+
+.card span
+{
+	height: 8rem;
+	display: grid;
+	align-content: space-between;
+
+}
+
+.card span *
+{
+	margin: 0;
+}
+
+.author
+{
+	opacity: .8;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+}
+
+.price
+{
+	font-weight: bold;
+	font-size: 1.1rem;
+	letter-spacing: .1rem;
+	color: red;
+}
+
+
+.books
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+button
+{
+	margin-bottom: 1rem;
+	border:none;
+	margin-right: .5rem;
+	font-size: 1.2rem;
+	border-radius: .2rem;
+	background-color: white;
+	border:1px grey solid;
+
+}
+
+button:focus
+{
+	background-color: red;
+	font-weight: bold;
+	color:white;
+
+}
+
+
+.card:hover
+{
+	cursor: pointer;
+	transform: translateY(-.4rem);
+	box-shadow: rgba(0,0,0,.1) 0rem 0rem 2rem;
+	transition: .3s;
+}
+
+.container
+{
+	width: 62rem;
+	border:1px grey solid;
+	padding: 1rem;
+	border-radius: 1rem;
+	box-shadow: rgba(0,0,0,.1) 0rem 0rem 1rem;
+
+}
+
+body
+{
+	place-items:center;
+	display: grid;
+	height: 90vh;
+	margin: 0;
+	padding: 0;
+}
+
+#root
+{
+	display: grid;
+	place-items:center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px)
+{
+
+.container
+{
+	width:23rem;
+}
+
+.books
+{
+	display: grid;
+}
+
+.card
+{
+	width: 80%;
+	
+}
+
 }
