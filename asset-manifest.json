@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-bookshop/static/css/main.efdde52e.css",
+    "main.js": "/react-bookshop/static/js/main.9823e375.js",
+    "index.html": "/react-bookshop/index.html",
+    "main.efdde52e.css.map": "/react-bookshop/static/css/main.efdde52e.css.map",
+    "main.9823e375.js.map": "/react-bookshop/static/js/main.9823e375.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.efdde52e.css",
+    "static/js/main.9823e375.js"
+  ]
+}
