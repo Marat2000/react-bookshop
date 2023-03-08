@@ -106,15 +106,34 @@ body
 	place-items:center;
 }
 
+.clicked
+{
+	background-color: red;
+}
+
+.rate
+{
+	display: flex;
+	width: 5rem;
+	justify-content: space-around;
+	list-style: none;
+	margin-right:0;
+	margin-left:auto;
+	padding:  0;
+	color:red;
+}
+
+.rate *
+{
+	font-size: 1.3rem;
+
+}
 
 
 
 
 
-
-
-
-
+/**************************************/
 
 
 @media (max-width: 600px)

@@ -3,7 +3,6 @@ import React,{useState, useEffect } from 'react'
 
 function App() {
 
-
 const [page,setPage]=useState([]);
 let pageNum=[0];
 const [booksInPage,setBooksInPage]=useState([]);
@@ -12,44 +11,44 @@ const [books,setBooks]=useState( [
 {imageUrl:"./img/book1.jpg", 
 "title":"I Don't Need Therapy",  
 "author":"Toni Lodge",
-"price":34.87
+"price":34.87,
 },
 
 {imageUrl:"./img/book2.jpg", 
 "title":"Atomic Habitsy",  
 "author":"James Clear",
-"price":29.22
+"price":29.22,
 },
 
 {imageUrl:"./img/book3.jpg", 
 "title":"Things We Hide From The Light",  
 "author":"Lucy Score",
-"price":20.10
+"price":20.10,
 },
 
 {imageUrl:"./img/book4.jpg", 
 "title":"How to Paint Without a Brush",  
 "author":"Red Hong Yi",
-"price":40.45
+"price":40.45,
 },
 
 {imageUrl:"./img/book5.jpg", 
 "title":"The Letters I Will Never Send",  
 "author":"Isabella Dorta",
-"price":18.85
+"price":18.85,
 },
 
 
 {imageUrl:"./img/book6.jpg", 
 "title":"Me vs Brain",  
 "author":"Hayley Morris",
-"price":24.96
+"price":24.96,
 },
 
 {imageUrl:"./img/book7.jpg", 
 "title":"The Body Keeps the Score",  
 "author":"Bessel van der Kolk",
-"price":25.22
+"price":25.22,
 },
 
 
@@ -58,7 +57,7 @@ const [books,setBooks]=useState( [
 {imageUrl:"./img/book8.jpg", 
 "title":"Cleopatra and Frankenstein",  
 "author":"Coco Mellors",
-"price":21.84
+"price":21.84,
 },
 
 
@@ -67,7 +66,7 @@ const [books,setBooks]=useState( [
 {imageUrl:"./img/book9.jpg", 
 "title":"Of Cabbages and Kimchi",  
 "author":"James Read",
-"price":36.88
+"price":36.88,
 },
 
 
@@ -76,44 +75,44 @@ const [books,setBooks]=useState( [
 {imageUrl:"./img/book10.jpg", 
 "title":"A Day of Fallen Night",  
 "author":"Samantha Shannon",
-"price":47.00
+"price":47.00,
 },
 
 {imageUrl:"./img/book11.jpg", 
 "title":"Drama Free",  
 "author":"Nedra Glover Tawwab",
-"price":22.62
+"price":22.62,
 },
-/////////////////////////////////////////////
 
 {imageUrl:"./img/book12.jpg", 
 "title":"The Glucose Goddess Method",  
 "author":"Jessie Inchauspe",
-"price":25.08
+"price":25.08,
 },
 
 {imageUrl:"./img/book13.jpg", 
 "title":"The Invisible String",  
 "author":"Patrice Karst",
-"price":16.14
+"price":16.14,
 },
 {imageUrl:"./img/book14.jpg", 
 "title":"12 Rules for Life	",  
 "author":"Jordan B. Peterson",
-"price":22.15
+"price":22.15,
 },
 
 {imageUrl:"./img/book15.jpg", 
 "title":"Food for Life",  
 "author":"Tim Spector",
-"price":41.98
+"price":41.98,
 },
 
-])
+]
+)
 
 
 
-let sortBooks=[], newBooks=[], i=0, j=0;
+let sortBooks=[],  newBooks=[], i=0, j=0;
 
 sortBooks.length=books.length;
 newBooks.length=books.length;
@@ -136,6 +135,8 @@ while ( i<books.length)
 	}
 		j=0;
 }
+
+
 
 
 
@@ -176,7 +177,6 @@ setBooksInPage(books.filter((book)=> books.indexOf(book)>=((pageClick-1)*6) && b
 
 
 
-
   return (
   	<>
   	<h1>BookShop</h1>
@@ -187,14 +187,22 @@ setBooksInPage(books.filter((book)=> books.indexOf(book)>=((pageClick-1)*6) && b
 
 {booksInPage.map((book)=>{
 	return(
+
+
+
 		<Card 
+				index={books.indexOf(book)}	
 				key={book.title}
 				title={book.title} 
 				imageUrl={book.imageUrl}
 				author={book.author}
 				about={book.about}
 				price={book.price}
+				setBooks={setBooks}
+				books={books}
+
  />
+ 
 		)
 })
 
