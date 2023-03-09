@@ -8,34 +8,41 @@ let pageNum=[0];
 const [booksInPage,setBooksInPage]=useState([]);
 const [pageClick,setPageClick]=useState(1)
 const [books,setBooks]=useState( [
+
+
 {imageUrl:"./img/book1.jpg", 
 "title":"I Don't Need Therapy",  
 "author":"Toni Lodge",
 "price":34.87,
+"rate":3
 },
 
 {imageUrl:"./img/book2.jpg", 
 "title":"Atomic Habitsy",  
 "author":"James Clear",
 "price":29.22,
+"rate":4
 },
 
 {imageUrl:"./img/book3.jpg", 
 "title":"Things We Hide From The Light",  
 "author":"Lucy Score",
 "price":20.10,
+"rate":2
 },
 
 {imageUrl:"./img/book4.jpg", 
 "title":"How to Paint Without a Brush",  
 "author":"Red Hong Yi",
 "price":40.45,
+"rate":1
 },
 
 {imageUrl:"./img/book5.jpg", 
 "title":"The Letters I Will Never Send",  
 "author":"Isabella Dorta",
 "price":18.85,
+"rate":5
 },
 
 
@@ -43,12 +50,14 @@ const [books,setBooks]=useState( [
 "title":"Me vs Brain",  
 "author":"Hayley Morris",
 "price":24.96,
+"rate":3
 },
 
 {imageUrl:"./img/book7.jpg", 
 "title":"The Body Keeps the Score",  
 "author":"Bessel van der Kolk",
 "price":25.22,
+"rate":4
 },
 
 
@@ -58,53 +67,57 @@ const [books,setBooks]=useState( [
 "title":"Cleopatra and Frankenstein",  
 "author":"Coco Mellors",
 "price":21.84,
+"rate":2
 },
-
-
 
 
 {imageUrl:"./img/book9.jpg", 
 "title":"Of Cabbages and Kimchi",  
 "author":"James Read",
 "price":36.88,
+"rate":3
 },
-
-
 
 
 {imageUrl:"./img/book10.jpg", 
 "title":"A Day of Fallen Night",  
 "author":"Samantha Shannon",
 "price":47.00,
+"rate":5
 },
 
 {imageUrl:"./img/book11.jpg", 
 "title":"Drama Free",  
 "author":"Nedra Glover Tawwab",
 "price":22.62,
+"rate":1
 },
 
 {imageUrl:"./img/book12.jpg", 
 "title":"The Glucose Goddess Method",  
 "author":"Jessie Inchauspe",
 "price":25.08,
+"rate":4
 },
 
 {imageUrl:"./img/book13.jpg", 
 "title":"The Invisible String",  
 "author":"Patrice Karst",
 "price":16.14,
+"rate":3
 },
 {imageUrl:"./img/book14.jpg", 
 "title":"12 Rules for Life	",  
 "author":"Jordan B. Peterson",
 "price":22.15,
+"rate":5
 },
 
 {imageUrl:"./img/book15.jpg", 
 "title":"Food for Life",  
 "author":"Tim Spector",
 "price":41.98,
+"rate":3
 },
 
 ]
@@ -169,10 +182,25 @@ const PageBtn=()=>
 
 useEffect(()=>{PageBtn()},[]);
 
-useEffect(()=>{
-setBooksInPage(books.filter((book)=> books.indexOf(book)>=((pageClick-1)*6) && books.indexOf(book)<= pageClick*6-1 ))},[books, pageClick]
-)
 
+
+
+
+const CardRate=(title, star)=>
+{
+	let forRate=[];
+	 forRate=books;
+for (let i=0;i<books.length;i++)
+	{if(forRate[i].title==title)
+	{ forRate[i]['rate']=star
+	 setBooks(forRate);
+	 console.log(forRate[i]  , books[i]);	}}
+	
+}
+
+useEffect(()=>{
+setBooksInPage(books.filter((book)=> books.indexOf(book)>=((pageClick-1)*6) && books.indexOf(book)<= pageClick*6-1 ))},[books, pageClick ]
+)
 
 
 
@@ -196,10 +224,10 @@ setBooksInPage(books.filter((book)=> books.indexOf(book)>=((pageClick-1)*6) && b
 				title={book.title} 
 				imageUrl={book.imageUrl}
 				author={book.author}
-				about={book.about}
 				price={book.price}
-				setBooks={setBooks}
-				books={books}
+				CardRate={CardRate}
+				rate={book.rate}
+
 
  />
  
