@@ -217,7 +217,7 @@ setBooksInPage(books.filter((book)=> books.indexOf(book)>=((pageClick-1)*6) && b
   return (
   	<>
 
-  <Link to="/"  className="link"><h1>BookShop</h1> </Link>
+  <Link to="/react-bookshop"  className="link"><h1>BookShop</h1> </Link>
 <div className="container" >  
 <div className="header">
 
@@ -241,7 +241,7 @@ setBooksInPage(books.filter((book)=> books.indexOf(book)>=((pageClick-1)*6) && b
 
 <Routes>
 
-<Route path='/' exact  element={ <Home/> }/>
+<Route path='/react-bookshop' exact  element={ <Home/> }/>
 <Route path='/notifications' exact element={ <Notifications/> }/>
 <Route path='/address' exact element={ <Address/> }/>
 <Route path='/support' exact element={ <Support/> }/>
