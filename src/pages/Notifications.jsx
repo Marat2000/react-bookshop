@@ -1,5 +1,5 @@
 import { BiBell} from 'react-icons/bi'
-import {useState , useEffect} from 'react'
+import {useState } from 'react'
 
 const Notifications=()=>
 {

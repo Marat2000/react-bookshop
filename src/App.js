@@ -14,7 +14,6 @@ export const AppContext=createContext({})
 function App() {
 
 const [page,setPage]=useState([]);
-let pageNum=[0];
 const [userClicked,setUserClicked]=useState(false);
 const [booksInPage,setBooksInPage]=useState([]);
 const [pageClick,setPageClick]=useState(1)
