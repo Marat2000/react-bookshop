@@ -1,10 +1,21 @@
-import Card from './components/Card'
-import React,{useState, useEffect } from 'react'
+import User from './components/User'
+import {BiUserCircle} from 'react-icons/bi'
+import Notifications from './pages/Notifications'
+import Address from './pages/Address'
+import Support from './pages/Support'
+import Settings from './pages/Settings'
+import Home from './pages/Home'
+import React,{useState, useEffect , createContext} from 'react'
+import { Routes, Route, Link} from  'react-router-dom'
+
+
+export const AppContext=createContext({})
 
 function App() {
 
 const [page,setPage]=useState([]);
 let pageNum=[0];
+const [userClicked,setUserClicked]=useState(false);
 const [booksInPage,setBooksInPage]=useState([]);
 const [pageClick,setPageClick]=useState(1)
 const [books,setBooks]=useState( [
@@ -159,7 +170,6 @@ const priceDown=()=>
 {
 	 setBooks([...newBooks])
 	   	 setPageClick(1);
-	   	  console.log(books);
 }
 
 
@@ -167,7 +177,6 @@ const priceUp=()=>
 {
 	 setBooks([...newBooks.reverse()])
 	 setPageClick(1); 
-	 console.log(books);
 }
 
 const PageBtn=()=>
@@ -188,13 +197,13 @@ useEffect(()=>{PageBtn()},[]);
 
 const CardRate=(title, star)=>
 {
-	let forRate=[];
-	 forRate=books;
+	
 for (let i=0;i<books.length;i++)
-	{if(forRate[i].title==title)
-	{ forRate[i]['rate']=star
-	 setBooks(forRate);
-	 console.log(forRate[i]  , books[i]);	}}
+	{if(books[i].title==title)
+	{ books[i]['rate']=star
+	 setBooks([...books]);
+	 // console.log(books[i] );	
+	}}
 	
 }
 
@@ -205,46 +214,41 @@ setBooksInPage(books.filter((book)=> books.indexOf(book)>=((pageClick-1)*6) && b
 
 
 
+
   return (
   	<>
-  	<h1>BookShop</h1>
-<div className="container">  	
-<button onClick={priceDown}>Price ▲</button>
-<button onClick={priceUp}>Price ▼</button>
-<div className="books">
 
-{booksInPage.map((book)=>{
-	return(
+  <Link to="/"  className="link"><h1>BookShop</h1> </Link>
+<div className="container" >  
+<div className="header">
+
+<BiUserCircle onClick={()=>setUserClicked(!userClicked)} className="userIcon"/>
+{userClicked && <>	<User setUserClicked={setUserClicked}/> <div className="overUser"  onClick={()=>setUserClicked(false)} ></div> </>	}
+</div>	
+<AppContext.Provider 
+	value={{books,
+			CardRate,
+			priceDown,
+			booksInPage,
+			priceUp,
+			page,
+			setPageClick,
+
+			
+			
 
 
+	}}>
 
-		<Card 
-				index={books.indexOf(book)}	
-				key={book.title}
-				title={book.title} 
-				imageUrl={book.imageUrl}
-				author={book.author}
-				price={book.price}
-				CardRate={CardRate}
-				rate={book.rate}
+<Routes>
 
-
- />
- 
-		)
-})
-
-}
-
-</div>
-
-{page.length>1&&
-
-	page.map((i)=>{
-		return(
-		 <button  key={page.indexOf(i)+1} onClick={()=> {    setPageClick(page.indexOf(i)+1)    }} > {page.indexOf(i)+1} </button>)
-	})
-}
+<Route path='/' exact  element={ <Home/> }/>
+<Route path='/notifications' exact element={ <Notifications/> }/>
+<Route path='/address' exact element={ <Address/> }/>
+<Route path='/support' exact element={ <Support/> }/>
+<Route path='/settings' exact element={ <Settings/> }/>
+</Routes>
+</AppContext.Provider>
 </div>
 </>
   );}

@@ -13,14 +13,13 @@ const [star,setStar]=useState(props.rate);
 	}
 
 
-	
 
 
 return (<div className="card" >
 		{/* <div> {props.index} </div> */}
 		<img src={props.imageUrl} alt="book"/>
 		<span>
-		<h3>{ props.title }</h3>
+		<h3 size={1}> {props.title } </h3>
 		<h5 className="author">{props.author}</h5>
 			
 			<ul className="rate">

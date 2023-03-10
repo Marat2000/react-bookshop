@@ -8,6 +8,7 @@
 	height: 10rem;
 	align-items: center;
 	margin:1rem 2rem;
+	z-index: 90;
 }
 
 .card img
@@ -16,6 +17,8 @@
 	height: 8rem;
 	margin-right: 2rem;
 }
+
+
 
 .card span
 {
@@ -88,6 +91,8 @@ button:focus
 	padding: 1rem;
 	border-radius: 1rem;
 	box-shadow: rgba(0,0,0,.1) 0rem 0rem 1rem;
+	position: relative;
+	min-height: 25rem;
 
 }
 
@@ -130,7 +135,239 @@ body
 }
 
 
+.userMenu
+{
+	list-style: none;
+	position: absolute;
+	background-color: white;
+	border-radius: 1rem;
+	padding: .7rem;
+	border:1px solid grey; 
+	font-weight: bold;	
+	width: 10rem;
+	text-align: center;
+	 box-shadow: rgba(0,0,0,.1) 0rem 0rem 2rem;
+	 z-index:100;
+	 right: 0;
+	 margin: 0 1rem;
+}
 
+.userMenu li
+{
+	border-bottom: 1px solid grey;
+	
+
+}
+
+li:hover
+{
+	opacity: .6;
+	cursor: pointer;
+}
+
+.rate li:hover
+{
+	opacity: 1;
+	filter:brightness(8);
+}
+
+.userIcon
+{
+	width: 1.5rem;
+	height: 1.5rem;
+}
+.userIcon:hover
+{
+	cursor: pointer;
+	opacity: .6;
+}
+
+.header
+{
+	text-align: right;
+}
+
+.overUser
+{
+	background-color:grey;
+	left: 0;
+	top: 0;
+	opacity: .05;
+	z-index: 95;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+}
+
+.notification
+{
+	border-radius: .5rem;
+	border:1px grey solid;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;	
+	align-items: center;
+	margin-bottom: .6rem;
+}
+
+.notification:hover
+{
+	cursor: pointer;
+	transform: translateY(-.1rem);
+	box-shadow: rgba(0,0,0,.1) 0rem 0rem 2rem;
+	transition: .2s;
+
+}
+
+.notification div
+{
+    display: flex;
+	justify-content: space-between;	
+	align-items: center;
+}
+
+.notDelete
+{
+	font-size: 1.5rem;
+	margin-left: .5rem;
+	font-weight: bold;
+	height:  3rem;
+	width: 2rem;
+	display: grid;
+	place-items:center;
+
+}
+
+.notDelete:hover
+{
+	opacity: .6;
+}
+
+
+.redPoint
+{
+	color: red;
+	font-size: 2rem;
+}
+
+.notText
+{
+	padding-right: .5rem; 
+}
+
+.notText p
+{
+	font-size: 1.2rem;
+	letter-spacing: 0.05rem;
+}
+
+.link
+{
+	color:#555;
+	text-decoration: none;
+
+}
+
+.headTitle
+{
+	display: flex;
+	align-items: center;
+	letter-spacing: .1rem;
+}
+
+.supportText
+{
+	width:90% ;
+	 resize: vertical ;
+	 font-size: 17px;
+	 min-height: 4rem;
+	 margin-bottom: 1rem;
+	 margin-right: auto;
+	 margin-left: auto;
+
+}
+
+
+.support
+{
+	border-radius: .5rem;
+	border:1px grey solid;
+	padding: 1rem;
+	display: grid;
+	align-items: flex-end;
+}
+
+.supportSentBtn
+{
+	margin:  0;
+	width: 20%;
+	margin-left: auto;
+	margin-right: 0;
+}
+
+
+.mapouter
+{
+	position:relative;
+	text-align:right;
+	height:30rem;
+	width:100%;
+
+}
+
+.gmap_canvas
+{
+	overflow:hidden;
+	background:none!important;
+	height:30rem;
+	width:100%;
+	border-radius: 1rem;
+
+}
+
+
+
+.settings
+{
+	display: grid;
+	margin-top: 1rem;
+}
+
+.settingsInputArea
+{
+	margin-bottom: 1rem;
+	height: 2rem; 
+	display: flex;
+	justify-content: space-between;
+	border:1px solid grey;
+	border-radius: .2rem;
+}
+
+.settings input
+{
+	width: 100%;
+	border:none;
+	outline: none;
+	background-color:rgba(0,0,0,0);
+	padding-left: 1rem;
+
+
+}
+
+.submitBtn
+{
+	justify-content: center;
+	letter-spacing: .1rem;
+	margin:0;
+	height: 2.2rem;
+}
+
+.errorText
+{
+	color: red;
+	letter-spacing: .1rem;
+	white-space: nowrap;
+}
 
 
 /**************************************/
@@ -152,6 +389,13 @@ body
 .card
 {
 	width: 80%;
+	
+}
+
+.settingsInputArea
+{
+	
+	display: grid;
 	
 }
 
