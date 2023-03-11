@@ -309,10 +309,10 @@ setBooksInPage(books.filter((book)=> books.indexOf(book)>=((pageClick-1)*6) && b
 <Routes>
 
 <Route path='/react-bookshop' exact  element={ <Home/> }/>
-<Route path='/notifications' exact element={ <Notifications/> }/>
-<Route path='/address' exact element={ <Address/> }/>
-<Route path='/support' exact element={ <Support/> }/>
-<Route path='/settings' exact element={ <Settings/> }/>
+<Route path='/react-bookshop/notifications' exact element={ <Notifications/> }/>
+<Route path='/react-bookshop/address' exact element={ <Address/> }/>
+<Route path='/react-bookshop/support' exact element={ <Support/> }/>
+<Route path='/react-bookshop/settings' exact element={ <Settings/> }/>
 </Routes>
 </AppContext.Provider>
 </div>
