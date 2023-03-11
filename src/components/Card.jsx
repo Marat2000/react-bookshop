@@ -1,8 +1,11 @@
-import {useState} from 'react'
+import {useState,useContext} from 'react'
+import {AppContext} from '../App'
+
 
 const Card=(props)=>
 {
 
+const {AddToCartClick}=useContext(AppContext)
 const [star,setStar]=useState(props.rate);
 
 	const starClick=(n)=>
@@ -11,6 +14,8 @@ const [star,setStar]=useState(props.rate);
 		console.log(props.title);
 		props.CardRate(props.title, n)
 	}
+
+
 
 
 
@@ -28,8 +33,15 @@ return (<div className="card" >
 			<li onClick={()=> starClick(3)	}> {star>=3? "★" : "☆"} </li>
 			<li onClick={()=> starClick(4)	}> {star>=4? "★" : "☆"} </li>
 			<li onClick={()=> starClick(5)	}> {star>=5? "★" : "☆"} </li>
-		</ul>
+			</ul>
+		<div style={{display:"flex" , justifyContent:"flex-end" , width:"10rem"}}>
 		<p className="price">{props.price} €  </p>
+
+		{ props.cartAdded ? <button className="addToCartBtn"  onClick={()=>AddToCartClick(props.title)} style={{backgroundColor:'red'}} >Added to Cart</button>
+		:					<button className="addToCartBtn"  onClick={()=>AddToCartClick(props.title)}>Add to Cart</button>}
+
+	
+		</div>
 		</span>
 	</div>)
 }

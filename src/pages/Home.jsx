@@ -31,6 +31,7 @@ return(
 				price={book.price}
 				CardRate={CardRate}
 				rate={book.rate}
+				cartAdded={book.cartAdded}
 			 />)
 					 })
 }
