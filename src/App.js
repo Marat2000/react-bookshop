@@ -279,7 +279,7 @@ setBooksInPage(books.filter((book)=> books.indexOf(book)>=((pageClick-1)*6) && b
   return (
   	<>
 
-  <Link to="/react-bookshop"  className="link"><h1>BookShop</h1> </Link>
+  <Link to="/react-bookshop/"  className="link"><h1>BookShop</h1> </Link>
 <div className="container" >  
 <div className="header">
 <BiCartAlt  onClick={()=>setCartClicked(!cartClicked)}  className="headerIcon"   />
@@ -308,7 +308,7 @@ setBooksInPage(books.filter((book)=> books.indexOf(book)>=((pageClick-1)*6) && b
 
 <Routes>
 
-<Route path='/react-bookshop' exact  element={ <Home/> }/>
+<Route path='/react-bookshop/' exact  element={ <Home/> }/>
 <Route path='/react-bookshop/notifications' exact element={ <Notifications/> }/>
 <Route path='/react-bookshop/address' exact element={ <Address/> }/>
 <Route path='/react-bookshop/support' exact element={ <Support/> }/>
