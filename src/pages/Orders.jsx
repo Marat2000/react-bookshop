@@ -23,7 +23,7 @@ return(<div key={'order'+item['id']} style={{border:'1px solid grey' , borderRad
 
 
 {item['items'].map((cards)=>{return(
-<div key={'orderCard'+item['id']+cards['title']} style={{width:'6rem' , height:'14rem' , marginRight:'1rem' , marginTop:'.5rem'}}>
+<div key={'orderCard'+item['id']+cards['title']} style={{width:'6rem' , height:'14rem' , marginRight:'.95rem' , marginTop:'.5rem'}}>
 <img style={{width:'6rem' , height:'9rem' , borderRadius:'.5rem' , border:'1px grey solid'}} src={cards['imageUrl']}/>
 
 <div style={{ fontSize:'.9rem', fontWeight:'bold' , lineHeight:'1rem'}}> {cards['title']} </div>
