@@ -4,9 +4,10 @@
 	border:1px solid grey;
 	padding: .5rem;
 	border-radius: 1rem;
-	width: 15rem;
+	width: 17rem;
 	height: 10rem;
 	align-items: center;
+	box-shadow: rgba(0,0,0,.2)	.1rem .1rem;
 	margin:1rem 2rem;
 	z-index: 90;
 }
@@ -16,6 +17,9 @@
 	width: 5rem;
 	height: 8rem;
 	margin-right: 2rem;
+	border-radius: .5rem;
+	box-shadow: rgba(0,0,0,.2)	.1rem .1rem;
+	border:#999 1px solid;
 }
 
 
@@ -63,9 +67,16 @@ button
 	margin-right: .5rem;
 	font-size: 1.2rem;
 	border-radius: .2rem;
+	box-shadow: rgba(0,0,0,.2)	.1rem .1rem;
 	background-color: white;
 	border:1px grey solid;
 
+}
+
+button:hover
+{
+	box-shadow: rgba(0,0,0,.08)	0 0 .8rem;
+	cursor: pointer;
 }
 
 button:focus
@@ -95,7 +106,7 @@ button:focus
 
 .container
 {
-	width: 42rem;
+	width: 45rem;
 	border:1px grey solid;
 	padding: 1rem;
 	border-radius: 1rem;
@@ -160,6 +171,17 @@ body
 	 margin: 0 1rem;
 }
 
+.userName
+{
+	text-transform: uppercase ;
+}
+
+.userName:hover
+{
+	opacity: 1;	
+	cursor: default !important;
+}
+
 .drawer
 {
 	position: absolute;
@@ -221,6 +243,23 @@ li:hover
 	text-align: right;
 }
 
+.cartCount
+{
+	display: block;
+	background-color:red;
+	border-radius: 50%;
+	color: white;
+	font-weight: bold;
+	width: 1rem;
+	position: absolute;
+	right: 3.2rem;
+	top:.6rem;
+	display: grid;
+	place-items:center;
+	font-size: .8rem;
+	height: 1rem;
+}
+
 .overBar
 {
 	background-color:grey;
@@ -228,8 +267,8 @@ li:hover
 	top: 0;
 	opacity: .05;
 	z-index: 95;
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	position: fixed;
 }
 
@@ -411,10 +450,11 @@ li:hover
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-top:.5rem;
+
 }
 
-.cartDelete
-{
+.cartDelete{
 	font-size: 1rem;
 	font-weight: bold;
 	width: 1rem;

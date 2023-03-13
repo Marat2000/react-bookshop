@@ -1,6 +1,7 @@
 import User from './components/User'
 import Drawer from './components/Drawer'
 import {BiUserCircle, BiCartAlt} from 'react-icons/bi'
+import Orders from './pages/Orders'
 import Notifications from './pages/Notifications'
 import Address from './pages/Address'
 import Support from './pages/Support'
@@ -14,13 +15,41 @@ export const AppContext=createContext({})
 
 function App() {
 
+
+
+
+
 const [page,setPage]=useState([]);
 const [userClicked,setUserClicked]=useState(false);
 const [cartClicked,setCartClicked]=useState(false);
 const [totalPrice,setTotalPrice]=useState(0);
 const [cartItems,setCartItems]=useState([]);
 const [booksInPage,setBooksInPage]=useState([]);
-const [pageClick,setPageClick]=useState(1)
+const [pageClick,setPageClick]=useState(1);
+const[registered, setRegistered]=useState(false);
+const [orders,setOrders]=useState([]);
+const [submitIsError,setSubmitIsError]=useState([false,false,false,false]);
+const [values,setValues]=useState([]);
+
+
+const [nots,setNots]=useState([
+	{
+		"id":1,
+		author:'BookShop',
+		title:"Thanks for using our service. If you don't like something write to us in Support",
+		unread:true
+	},
+	{
+		id:2,
+		author:"BookShop",
+		title:"Welcome to BookShop",
+		unread:false
+	},
+	
+])
+
+
+
 const [books,setBooks]=useState( [
 
 
@@ -149,8 +178,7 @@ const [books,setBooks]=useState( [
 "cartAdded":false
 },
 
-]
-)
+])
 
 
 
@@ -251,6 +279,17 @@ const cartDelete=(title)=>
 	setBooks([...books]);
 }
 
+const orderClick=()=>
+{
+
+	let a={id:`${orders.length}` , items:cartItems}
+	setOrders([...orders,a])
+	for(let i=0;i<cartItems.length;i++)
+		cartDelete(cartItems[i]['title'])
+	console.log(orders)
+
+
+}
 
 
 useEffect(()=>
@@ -273,6 +312,12 @@ setBooksInPage(books.filter((book)=> books.indexOf(book)>=((pageClick-1)*6) && b
 );
 
 
+useEffect(()=>{
+for(let i=0;i<submitIsError.length;i++)
+	values[i]=null
+setValues([...values])
+console.log(values)
+},[])
 
 
 
@@ -284,11 +329,13 @@ setBooksInPage(books.filter((book)=> books.indexOf(book)>=((pageClick-1)*6) && b
 <div className="header">
 <BiCartAlt  onClick={()=>setCartClicked(!cartClicked)}  className="headerIcon"   />
 
+{cartItems.length>0 && 	<span className="cartCount">{cartItems.length} </span>}
+
 <BiUserCircle onClick={()=>setUserClicked(!userClicked)} className="headerIcon"/>
 </div>	
-{userClicked && <>	<User setUserClicked={setUserClicked}/> <div className="overBar"  onClick={()=>setUserClicked(false)} ></div> </>	}
+{userClicked && <>	<User registered={registered} firstName={values[0]} lastName={values[1]} setUserClicked={setUserClicked}/> <div className="overBar"  onClick={()=>setUserClicked(false)} ></div> </>	}
 
-{cartClicked && <>	<Drawer totalPrice={totalPrice} cartItems={cartItems} cartDelete={cartDelete} /> <div className="overBar"  onClick={()=>setCartClicked(false)} ></div> </>	}
+{cartClicked && <>	<Drawer orders={orders} orderClick={orderClick}  totalPrice={totalPrice} cartItems={cartItems} cartDelete={cartDelete} /> <div className="overBar"  onClick={()=>setCartClicked(false)} ></div> </>	}
 
 <AppContext.Provider 
 	value={{books,
@@ -306,13 +353,15 @@ setBooksInPage(books.filter((book)=> books.indexOf(book)>=((pageClick-1)*6) && b
 
 	}}>
 
-<Routes>
+<Routes >
 
 <Route path='/react-bookshop/' exact  element={ <Home/> }/>
-<Route path='/react-bookshop/notifications' exact element={ <Notifications/> }/>
+
+<Route path='/react-bookshop/orders' exact element={ <Orders orders={orders} /> }/>
+<Route path='/react-bookshop/notifications' exact element={ <Notifications nots={nots} setNots={setNots} /> }/>
 <Route path='/react-bookshop/address' exact element={ <Address/> }/>
 <Route path='/react-bookshop/support' exact element={ <Support/> }/>
-<Route path='/react-bookshop/settings' exact element={ <Settings/> }/>
+<Route path='/react-bookshop/settings' exact element={ <Settings registered={registered} setRegistered={setRegistered} submitIsError={submitIsError} setSubmitIsError={setSubmitIsError} values={values } setValues={setValues}/> }/>
 </Routes>
 </AppContext.Provider>
 </div>

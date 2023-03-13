@@ -1,39 +1,24 @@
 import { BiBell} from 'react-icons/bi'
 import {useState } from 'react'
 
-const Notifications=()=>
+const Notifications=(props)=>
 {
 
 
-const [nots,setNots]=useState([
-	{
-		"id":1,
-		author:'BookShop',
-		title:"Thanks for using our service. If you don't like something write to us in Support",
-		unread:true
-	},
-	{
-		id:2,
-		author:"BookShop",
-		title:"girq em caxm karoxa uzeq",
-		unread:false
-	},
-	
-])
 
 
 
 
 const checked=(itemId)=>{
-	nots[nots.indexOf(  nots.filter(el=>el.id==itemId)[0]  )].unread=false;
-	setNots([...nots]);
+	props.nots[props.nots.indexOf(  props.nots.filter(el=>el.id==itemId)[0]  )].unread=false;
+	props.setNots([...props.nots]);
 }
 
 
 const onDelete=(itemId)=>
 {
 
-	 setNots([... nots.filter(el=>el.id!=itemId)]);
+	 props.setNots([... props.nots.filter(el=>el.id!=itemId)]);
 	
 }
 
@@ -42,7 +27,7 @@ return(
 <>
 	<h2 className="headTitle"><BiBell /> Notifications</h2>
 	<hr/> 
-		{nots.map((not)=>{
+		{props.nots.length>0 ? props.nots.map((not)=>{
 			return(
 			
 		
@@ -60,10 +45,12 @@ return(
 				</div>
 			
 		</div>
-	
-	
-	
-		)})}	
+	)})
+:
+<div style={{marginBottom:'1rem' , fontWeight:'bold'}}>You don't have notifications yet. </div>
+}
+
+		
 </>)
 
 }

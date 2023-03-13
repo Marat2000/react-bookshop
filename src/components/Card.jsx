@@ -35,7 +35,7 @@ return (<div className="card" >
 			<li onClick={()=> starClick(5)	}> {star>=5? "★" : "☆"} </li>
 			</ul>
 		<div style={{display:"flex" , justifyContent:"flex-end" , width:"10rem"}}>
-		<p className="price">{props.price} €  </p>
+		<p className="price">{props.price}€</p>
 
 		{ props.cartAdded ? <button className="addToCartBtn"  onClick={()=>AddToCartClick(props.title)} style={{backgroundColor:'red'}} >Added to Cart</button>
 		:					<button className="addToCartBtn"  onClick={()=>AddToCartClick(props.title)}>Add to Cart</button>}
