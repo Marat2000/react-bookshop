@@ -1,9 +1,6 @@
-import User from './components/User'
-import Drawer from './components/Drawer'
-import {BiUserCircle, BiCartAlt} from 'react-icons/bi'
+import Header from './components/Header'
 import Orders from './pages/Orders'
 import Notifications from './pages/Notifications'
-import Address from './pages/Address'
 import Support from './pages/Support'
 import Settings from './pages/Settings'
 import Home from './pages/Home'
@@ -19,7 +16,10 @@ function App() {
 
 
 
+const [addressAccept,setAddressAccept]=useState(false)
 const [page,setPage]=useState([]);
+const [addressInput, setAddressInput]=useState('')
+const [cityInput,setCityInput]=useState('')
 const [userClicked,setUserClicked]=useState(false);
 const [cartClicked,setCartClicked]=useState(false);
 const [totalPrice,setTotalPrice]=useState(0);
@@ -28,7 +28,7 @@ const [booksInPage,setBooksInPage]=useState([]);
 const [pageClick,setPageClick]=useState(1);
 const[registered, setRegistered]=useState(false);
 const [orders,setOrders]=useState([]);
-const [submitIsError,setSubmitIsError]=useState([false,false,false,false]);
+const [submitIsError,setSubmitIsError]=useState([false,false,false,false, false]);
 const [values,setValues]=useState([]);
 
 
@@ -225,20 +225,6 @@ const priceUp=()=>
 	 setPageClick(1); 
 }
 
-const PageBtn=()=>
-{	 i=1;
-	 let pages=[0];
-	while(i<Math.ceil(books.length/6))
-	{ pages.push(i);
-		 i++;}
-		 setPage([...pages])
-	
-}
-
-useEffect(()=>{PageBtn()},[]);
-
-
-
 
 
 const CardRate=(title, star)=>
@@ -282,11 +268,14 @@ const cartDelete=(title)=>
 const orderClick=()=>
 {
 
-	let a={id:`${orders.length}` , items:cartItems}
-	setOrders([...orders,a])
-	for(let i=0;i<cartItems.length;i++)
-		cartDelete(cartItems[i]['title'])
-	console.log(orders)
+	if(addressAccept) {
+	
+		let a={id:`${orders.length}` , items:cartItems}
+		setOrders([...orders,a])
+		for(let i=0;i<cartItems.length;i++)
+			cartDelete(cartItems[i]['title'])
+	}
+	// console.log(orders)
 
 
 }
@@ -301,24 +290,35 @@ if(cartItems.length>0)
 	for(let i=0;i<cartItems.length;i++)
 		price=price+cartItems[i].price;
 	setTotalPrice(price)
-	console.log(totalPrice)}
+	// console.log(totalPrice)
+}
 
 
 },[books,cartItems]);
 
 
-useEffect(()=>{ cartBooks();
-setBooksInPage(books.filter((book)=> books.indexOf(book)>=((pageClick-1)*6) && books.indexOf(book)<= pageClick*6-1 ))},[books, pageClick ]
-);
+useEffect(()=>{
+ cartBooks();
+setBooksInPage(books.filter((book)=> books.indexOf(book)>=((pageClick-1)*6) && books.indexOf(book)<= pageClick*6-1 ));
+},[books, pageClick ]);
+
 
 
 useEffect(()=>{
 for(let i=0;i<submitIsError.length;i++)
 	values[i]=null
 setValues([...values])
-console.log(values)
+// console.log(values)
 },[])
 
+useEffect(()=>{
+ i=1;
+	 let pages=[0];
+	while(i<Math.ceil(books.length/6))
+	{ pages.push(i);
+		 i++;}
+		 setPage([...pages])
+},[]);
 
 
   return (
@@ -326,16 +326,7 @@ console.log(values)
 
   <Link to="/react-bookshop/"  className="link"><h1>BookShop</h1> </Link>
 <div className="container" >  
-<div className="header">
-<BiCartAlt  onClick={()=>setCartClicked(!cartClicked)}  className="headerIcon"   />
 
-{cartItems.length>0 && 	<span className="cartCount">{cartItems.length} </span>}
-
-<BiUserCircle onClick={()=>setUserClicked(!userClicked)} className="headerIcon"/>
-</div>	
-{userClicked && <>	<User registered={registered} firstName={values[0]} lastName={values[1]} setUserClicked={setUserClicked}/> <div className="overBar"  onClick={()=>setUserClicked(false)} ></div> </>	}
-
-{cartClicked && <>	<Drawer orders={orders} orderClick={orderClick}  totalPrice={totalPrice} cartItems={cartItems} cartDelete={cartDelete} /> <div className="overBar"  onClick={()=>setCartClicked(false)} ></div> </>	}
 
 <AppContext.Provider 
 	value={{books,
@@ -345,23 +336,36 @@ console.log(values)
 			priceUp,
 			page,
 			setPageClick,
-			AddToCartClick
+			AddToCartClick,
+			pageClick,
+			setCartClicked,
+			cartItems,
+			userClicked,
+			registered,
+			values,
+			setUserClicked,
+			cartClicked,
+			orders,
+			orderClick,
+			totalPrice,
+			cartDelete,
+			addressAccept
 
-			
-			
-
-
-	}}>
+}}>
+<Header />
 
 <Routes >
 
 <Route path='/react-bookshop/' exact  element={ <Home/> }/>
-
 <Route path='/react-bookshop/orders' exact element={ <Orders orders={orders} /> }/>
 <Route path='/react-bookshop/notifications' exact element={ <Notifications nots={nots} setNots={setNots} /> }/>
-<Route path='/react-bookshop/address' exact element={ <Address/> }/>
 <Route path='/react-bookshop/support' exact element={ <Support/> }/>
-<Route path='/react-bookshop/settings' exact element={ <Settings registered={registered} setRegistered={setRegistered} submitIsError={submitIsError} setSubmitIsError={setSubmitIsError} values={values } setValues={setValues}/> }/>
+<Route path='/react-bookshop/settings' exact element={ <Settings 	addressAccept={addressAccept} 	setAddressAccept={setAddressAccept} 
+																	registered={registered} 		setRegistered={setRegistered}
+																	 submitIsError={submitIsError} 	setSubmitIsError={setSubmitIsError} 
+																	 values={values } 				setValues={setValues}
+																	 addressInput={addressInput} 	setAddressInput={setAddressInput}  
+																	 cityInput={cityInput} 			setCityInput={setCityInput} /> }/>
 </Routes>
 </AppContext.Provider>
 </div>

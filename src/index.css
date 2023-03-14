@@ -419,7 +419,7 @@ li:hover
 	border-radius: .2rem;
 }
 
-.settings input
+.settingsInputArea input
 {
 	width: 100%;
 	border:none;
@@ -445,6 +445,17 @@ li:hover
 	white-space: nowrap;
 }
 
+.addressForm
+{
+	display:flex;
+	justify-content:center;
+}
+
+.addressForm .settingsInputArea
+{
+	margin:0.5rem;
+}
+
 .cartItem
 {
 	display: flex;
@@ -467,6 +478,42 @@ li:hover
 	cursor: pointer;
 
 }
+
+.cityList
+{
+	position: absolute;
+	transform: translateY(1.5rem);
+	width:9.5rem;
+	left: 2rem	;
+	overflow: auto;
+	max-height: 5rem;
+	overflow-x: hidden;
+	background-color: white;
+	box-shadow: rgba(0,0,0,.1) 0 0 1rem;
+	z-index: 101;
+	border:1px solid grey;
+	padding: 0;
+	text-align: center;
+
+
+}
+
+.cityInput
+{
+	width:16rem !important;
+}
+
+.addressInput
+{
+	width: 100%;
+}
+
+.cityList li
+{
+	list-style: none;
+	border-bottom:1px solid #999999;
+}
+
 
 
 /**************************************/
@@ -499,10 +546,23 @@ li:hover
 
 	
 }
+.addressForm
+{
+	display:grid;
+}
+
+
+
 
 .errorText
 {
 	font-size:.6rem;
+}
+
+
+.cityList
+{
+	left:7.75rem;
 }
 
 

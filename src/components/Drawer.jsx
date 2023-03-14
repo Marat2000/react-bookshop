@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import {Link} from 'react-router-dom'
 
 
 
@@ -32,10 +33,14 @@ return(
 
 	{ props.cartItems.length>0 ?
 				<>	<div style={{marginTop:'1rem' , display:"flex" , justifyContent:"space-between" , color:"red" , fontWeight:"bold", alignItems:'center'}}>
+				
 				<span>PRICE:</span><div style={{ backgroundColor:'grey', opacity:".6", height:"1px", width:'50%'}} > </div> 	<span> { Math.floor( props.totalPrice*100)/100}€</span> 
 				</div>
+				
+				{props.addressAccept==false && <div style={{color:'red' , textAlign:'center' , fontWeight:'bold', border:'3px red double' , borderRadius:'.5rem'}}> To Place an order you must enter the address in the Settings </div>}
+				{props.addressAccept==false &&  <Link to="/react-bookshop/settings" className="link"  onClick={()=>props.setCartClicked(false)}><button style={{width:'100%' , marginTop:'.5rem'}}>Settings</button></Link> }
 
-				 <button style={{width:'100%' , marginTop:'.5rem'}} onClick={()=>props.orderClick()}>Order</button>
+				 {props.addressAccept && <button style={{width:'100%' , marginTop:'.5rem'}} onClick={()=>props.orderClick()}>Order</button>}
 				 </>
 
 				: 

@@ -1,5 +1,6 @@
 import {FiSettings} from 'react-icons/fi'
 import {useState, useEffect} from 'react'
+import Address from '.././components/Address'
 
 const Settings=(props)=>
 {
@@ -60,10 +61,9 @@ let k=0;
 			k++;
 		if(k==4)
 			props.setRegistered(true);
-
-
-
 }
+
+
 
 
 	return(
@@ -109,6 +109,9 @@ let k=0;
 		</div>
 	}
 
+	<Address values={props.values} addressAccept={props.addressAccept} setAddressAccept={props.setAddressAccept} 
+								addressInput={props.addressInput} setAddressInput={props.setAddressInput} 
+							cityInput={props.cityInput} setCityInput={props.setCityInput}/>
 		
 
 </>
