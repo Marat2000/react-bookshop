@@ -53,6 +53,11 @@
 		display:grid;
 	}
 
+	@media(max-width:31rem)
+{
+	margin-bottom:1rem;
+}
+
 }
 
 
@@ -85,12 +90,14 @@
 	z-index: 100;
 	top: 9rem;
 	left: 1rem;
+	color:var(--Pink);
 		
 li
 {
 
 border-bottom: 1px solid var(--Grey);
 width:auto;
+margin-bottom:.4rem;
 
 }
 
@@ -119,12 +126,14 @@ width:auto;
 	z-index: 100;
 	top: 9rem;
 	left: 12rem;
+	color:var(--Pink);
 		
 li
 {
 
 border-bottom: 1px solid var(--Grey);
 width:auto;
+margin-bottom:.4rem;
 
 }
 
@@ -133,7 +142,6 @@ width:auto;
 	top:10rem;
 	left:1rem;
 }
-
 
 }
 
