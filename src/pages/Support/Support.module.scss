@@ -1,0 +1,60 @@
+.headTitle
+{
+	display: flex;
+	align-items: center;
+	letter-spacing: .1rem;
+	color:var(--Dark);
+	border-bottom: 1px solid var(--Grey);
+	padding-bottom: 1rem;
+} 
+
+.support
+{
+	border-radius: .5rem;
+	border:1px var(--Grey) solid;
+	padding: 1rem;
+	display: grid;
+	align-items: flex-end;
+}
+
+.supportSendBtn
+{
+	margin:  0;
+	width: 20%;
+	margin-left: auto;
+	margin-right: 0;
+	font-size: 1.2rem;
+	height:2rem;
+	border-radius:1rem;
+	color:var(--Pink);
+	transition: .3s;
+}
+
+.supportSentBtn
+{
+	margin:  0;
+	width: 20%;
+	margin-left: auto;
+	margin-right: 0;
+	font-size: 1.2rem;
+	height:2rem;
+	border-radius:1rem;
+	background-color: var(--Pink);
+	color:var(--White);
+	transition: .3s;
+}
+
+.supportText
+{
+	width: 90%;
+    resize: vertical;
+    font-size: 17px;
+    min-height: 4rem;
+    margin-bottom: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+    color: var(--Dark);
+    background-color: var(--Light);
+    border-radius: 0.5rem;
+}
+

@@ -1,0 +1,98 @@
+.headTitle
+{
+	display: flex;
+	align-items: center;
+	letter-spacing: .1rem;
+	color:var(--Dark);
+	border-bottom: 1px solid var(--Grey);
+	padding-bottom: 1rem;
+}
+ 
+
+.welcome
+{
+	margin-bottom:1rem ;
+	 font-weight:bold;
+	color:var(--Dark);
+}
+
+.name
+{
+	 color:var(--Pink);
+	text-transform:uppercase;
+}
+
+.settings
+{
+	display: grid;
+	margin-top: 1rem;
+}
+
+.settingsInputArea
+{
+	margin-bottom: 1rem;
+	height: 2rem; 
+	display: flex;
+	justify-content: space-between;
+	border:1px solid var(--Dark);
+	border-radius: 1rem;
+
+
+ input
+{
+	width: 100%;
+	border:none;
+	outline: none;
+	background-color:rgba(0,0,0,0);
+	padding-left: 1rem;
+	color:var(--Dark);
+	font-weight: bold;
+}
+
+@media(max-width:33rem)
+	{
+		display:grid;
+	}
+
+}
+
+.errorText
+{
+	color: red;
+	letter-spacing: .1rem;
+	white-space: nowrap;
+	font-size: .9rem;
+	margin-top:auto;
+	margin-bottom:auto;
+	@media(max-width:43rem)
+	{
+		font-size:.7rem;
+	}
+
+	@media(max-width:33rem)
+	{
+		margin-left:1rem;
+	}
+
+	@media(max-width:20rem)
+	{
+		font-size:.6rem;
+		letter-spacing: .05rem;
+
+	}
+	
+
+}
+
+
+.submitBtn
+{
+	justify-content: center;
+	letter-spacing: .1rem;
+	margin:0;
+	height: 2.2rem;
+	color:var(--Dark);
+	border-radius: 1rem;
+
+}
+

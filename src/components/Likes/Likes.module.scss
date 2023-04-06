@@ -1,0 +1,103 @@
+.drawer
+{
+	position: absolute;
+	background-color: var(--White);
+	border-radius: 1rem;
+	border:1px solid var(--Grey); 
+	width: 12rem;
+	 box-shadow: rgba(0,0,0,.1) 0rem 0rem 2rem;
+	min-height: 10rem;
+	padding: .7rem;
+	 z-index:98;	
+	 margin: 0 1rem;
+	 right: 0;
+	 top: 4rem;
+}
+
+.item
+{
+	display:grid;
+	grid-template-columns: .5fr 1fr .1fr;
+	border-bottom:1px solid var(--Grey);
+	height: 5rem;
+	align-items: center;
+	text-align: center;
+}
+
+.image
+{
+	width:calc( 100% - 1rem ) ;
+	height:calc( 100% - 1.5rem ) ;
+	margin:.4rem;
+	margin-left: 0;
+	border:1px solid var(--Grey);
+	border-radius: .2rem;
+	box-shadow: var(--Pink) 1px 1px 1px;
+
+}
+
+.title
+{
+	color:var(--Pink);
+}
+
+.author
+{
+	color:var(--Dark);
+}
+
+.delete
+{
+	cursor:pointer;
+	color:var(--Dark);
+	transition: .2s;
+	&:hover
+	{
+	opacity: .6;
+
+	}
+}
+
+.allCards
+{
+	overflow-y: auto;
+	max-height: 30rem;
+	padding-right: 1rem;
+}
+
+.empty
+{
+	font-size: 1.4rem;
+}
+
+.emptyHeart
+{
+	font-size: 3rem;
+	color:var(--Pink);
+}
+
+.emptyText
+{
+	text-align: center;
+	margin-right: -1rem;
+	display: grid;
+	place-items:center;
+}
+
+.link
+{
+	height: 100%;
+	width: 100%;
+	text-decoration: none;
+}
+
+.linkText
+{
+	
+	text-decoration: none;
+	&:hover
+	{
+		text-decoration:underline;
+	}
+}
+

@@ -1,376 +1,311 @@
-import Header from './components/Header'
-import Orders from './pages/Orders'
-import Notifications from './pages/Notifications'
-import Support from './pages/Support'
-import Settings from './pages/Settings'
-import Home from './pages/Home'
-import React,{useState, useEffect , createContext} from 'react'
-import { Routes, Route, Link} from  'react-router-dom'
+import logo from './logo.png'
+import axios from "axios";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import Orders from "./pages/Orders";
+import Notifications from "./pages/Notifications";
+import Support from "./pages/Support";
+import Settings from "./pages/Settings";
+import AboutBook from "./pages/AboutBook";
+import NotFound from "./pages/NotFound";
+import React, { useState, useEffect, createContext } from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import notsData from "./nots.json";
 
 
-export const AppContext=createContext({})
+ // import data from './data.json'
+
+export const AppContext = createContext({});
 
 function App() {
+	let categoryArray = ["All","Memories","Psychology","Romance","ArtBooks","Letters&Journals","Food&Drink","Fantasy","Children's","Manga","Crime"];
+	let sortArray = ["None", "Rating", "Price", "Alphabet"];
+
+	const [isLoaded, setIsLoaded] = useState(false);
+
+	const [addressAccept, setAddressAccept] = useState(false);
+	const [addressInput, setAddressInput] = useState("");
+	const [cityInput, setCityInput] = useState("");
+
+	const [submitIsError, setSubmitIsError] = useState([...new Array(4)].fill(false));
+	const [values, setValues] = useState([...new Array(4)].fill(null));
+	const [registered, setRegistered] = useState(false);
+
+	const [userClicked, setUserClicked] = useState(false);
+	const [cartClicked, setCartClicked] = useState(false);
+	const [likesClicked, setLikesClicked] = useState(false);
+
+	const [categoriesClicked, setCategoriesClicked] = useState(false);
+	const [sortClicked, setSortClicked] = useState(false);
+	const [desc, setDesc] = useState(false);
+	const [sort, setSort] = useState(0);
+	const [categories, setCategories] = useState(0);
+	const [searchInput, setSearchInput] = useState("");
+
+	const [allBooks, setAllBooks] = useState(0);
+	const [books, setBooks] = useState([...new Array(6)].fill(0));
+
+	const [about, setAbout] = useState(0);
+
+	const [cartItems, setCartItems] = useState([]);
+	const [likedCard, setLikedCard] = useState([]);
+	const [totalPrice, setTotalPrice] = useState(0);
+	const [orders, setOrders] = useState([]);
+
+	const [darkMode, setDarkMode] = useState();
+
+	const [page, setPage] = useState([]);
+	const [booksInPage, setBooksInPage] = useState([]);
+	const [pageClick, setPageClick] = useState(1); 
+
+	const [nots, setNots] = useState(notsData);
 
 
 
 
+useEffect(() => {
+	setIsLoaded(false);
+	const Data = async () => {
+		try {
+			let allData = await axios.get(
+				"https://64267886d24d7e0de470a14c.mockapi.io/bookshop");
 
-const [addressAccept,setAddressAccept]=useState(false)
-const [page,setPage]=useState([]);
-const [addressInput, setAddressInput]=useState('')
-const [cityInput,setCityInput]=useState('')
-const [userClicked,setUserClicked]=useState(false);
-const [cartClicked,setCartClicked]=useState(false);
-const [totalPrice,setTotalPrice]=useState(0);
-const [cartItems,setCartItems]=useState([]);
-const [booksInPage,setBooksInPage]=useState([]);
-const [pageClick,setPageClick]=useState(1);
-const[registered, setRegistered]=useState(false);
-const [orders,setOrders]=useState([]);
-const [submitIsError,setSubmitIsError]=useState([false,false,false,false, false]);
-const [values,setValues]=useState([]);
+			let forBooks = await allData.data[1].items;
+			let forDarkMode = await allData.data[0].darkMode;
+
+			setAllBooks([...forBooks]);
+			setBooks([...forBooks]);
+			setDarkMode(forDarkMode);
 
 
-const [nots,setNots]=useState([
-	{
-		"id":1,
-		author:'BookShop',
-		title:"Thanks for using our service. If you don't like something write to us in Support",
-		unread:true
-	},
-	{
-		id:2,
-		author:"BookShop",
-		title:"Welcome to BookShop",
-		unread:false
-	},
-	
-])
+			// 	 setAllBooks([...data[1].items] )
+			// 	 setBooks ([...data[1].items] )
+			// 	 setDarkMode(data[0].darkMode)
 
+		setTimeout(()=>setIsLoaded(true),200)
+			
+		} catch (error) {
+		
 
+			console.log(error);
+		}
+	};
 
-const [books,setBooks]=useState( [
+	Data()
+}, []);
 
+	useEffect(() => {
+		if (isLoaded) {
+			if (darkMode) 
+			{
+				let obj = { darkMode: true };
 
-{imageUrl:"./img/book1.jpg", 
-"title":"I Don't Need Therapy",  
-"author":"Toni Lodge",
-"price":34.87,
-"rate":3,
-"cartAdded":false
-},
+				document.documentElement.style.setProperty("--Dark", "rgb(250, 163, 86)");
+				document.documentElement.style.setProperty("--Pink", "rgb(250, 121, 112)");
+				document.documentElement.style.setProperty("--Light", "rgb(33, 38, 45)");
+				document.documentElement.style.setProperty("--White", "rgb(22, 27, 34)");
+				document.documentElement.style.setProperty("--Grey", "rgb(60,60,70)");
 
-{imageUrl:"./img/book2.jpg", 
-"title":"Atomic Habitsy",  
-"author":"James Clear",
-"price":29.22,
-"rate":4,
-"cartAdded":false
-},
+				axios.put("https://64267886d24d7e0de470a14c.mockapi.io/bookshop/1", obj);
+			}
 
-{imageUrl:"./img/book3.jpg", 
-"title":"Things We Hide From The Light",  
-"author":"Lucy Score",
-"price":20.10,
-"rate":2,
-"cartAdded":false
-},
+			else 
+			{
+				let obj = { darkMode: false };
 
-{imageUrl:"./img/book4.jpg", 
-"title":"How to Paint Without a Brush",  
-"author":"Red Hong Yi",
-"price":40.45,
-"rate":1,
-"cartAdded":false
-},
+				document.documentElement.style.setProperty("--Dark", "rgb(125,45,70)");
+				document.documentElement.style.setProperty("--Pink", "rgb(250,60,100)");
+				document.documentElement.style.setProperty("--Light", "rgb(250,220,230)");
+				document.documentElement.style.setProperty("--White", "rgb(250,250,250)");
+				document.documentElement.style.setProperty("--Grey", "rgb(155,155,155)");
 
-{imageUrl:"./img/book5.jpg", 
-"title":"The Letters I Will Never Send",  
-"author":"Isabella Dorta",
-"price":18.85,
-"rate":5,
-"cartAdded":false
-},
+				axios.put("https://64267886d24d7e0de470a14c.mockapi.io/bookshop/1", obj);
+			}
+		}
+	}, [darkMode , isLoaded]);
 
-
-{imageUrl:"./img/book6.jpg", 
-"title":"Me vs Brain",  
-"author":"Hayley Morris",
-"price":24.96,
-"rate":3,
-"cartAdded":false
-},
-
-{imageUrl:"./img/book7.jpg", 
-"title":"The Body Keeps the Score",  
-"author":"Bessel van der Kolk",
-"price":25.22,
-"rate":4,
-"cartAdded":false
-},
-
-
-
-
-{imageUrl:"./img/book8.jpg", 
-"title":"Cleopatra and Frankenstein",  
-"author":"Coco Mellors",
-"price":21.84,
-"rate":2,
-"cartAdded":false
-},
-
-
-{imageUrl:"./img/book9.jpg", 
-"title":"Of Cabbages and Kimchi",  
-"author":"James Read",
-"price":36.88,
-"rate":3,
-"cartAdded":false
-},
-
-
-{imageUrl:"./img/book10.jpg", 
-"title":"A Day of Fallen Night",  
-"author":"Samantha Shannon",
-"price":47.00,
-"rate":5,
-"cartAdded":false
-},
-
-{imageUrl:"./img/book11.jpg", 
-"title":"Drama Free",  
-"author":"Nedra Glover Tawwab",
-"price":22.62,
-"rate":1,
-"cartAdded":false
-},
-
-{imageUrl:"./img/book12.jpg", 
-"title":"The Glucose Goddess Method",  
-"author":"Jessie Inchauspe",
-"price":25.08,
-"rate":4,
-"cartAdded":false
-},
-
-{imageUrl:"./img/book13.jpg", 
-"title":"The Invisible String",  
-"author":"Patrice Karst",
-"price":16.14,
-"rate":3,
-"cartAdded":false
-},
-{imageUrl:"./img/book14.jpg", 
-"title":"12 Rules for Life	",  
-"author":"Jordan B. Peterson",
-"price":22.15,
-"rate":5,
-"cartAdded":false
-},
-
-{imageUrl:"./img/book15.jpg", 
-"title":"Food for Life",  
-"author":"Tim Spector",
-"price":41.98,
-"rate":3,
-"cartAdded":false
-},
-
-])
-
-
-
-let sortBooks=[],  newBooks=[], i=0, j=0;
-
-sortBooks.length=books.length;
-newBooks.length=books.length;
-
-for( i=0;i<books.length;i++)
-{sortBooks[i]=books[i].price;
-sortBooks.sort((x,y)=>x-y);
-newBooks[i]=books[i];}
-
-
-
-i=0;
-while ( i<books.length)
-{for( j=0;j<books.length;j++)
-
-	{
-		if(books[j].price===sortBooks[i])
-			{newBooks[i]=books[j];
-						i++;}
+const searchFunction = () => {
+	if (isLoaded) {
+		let bookUpdating = [...allBooks].filter(
+			(book) =>
+				book.title
+					.toLowerCase().split("'").join("").includes(searchInput.toLowerCase()) |
+				book.author.toLowerCase().includes(searchInput.toLowerCase())
+		);
+		if (categories != 0)
+			bookUpdating = bookUpdating.filter(
+				(book) => book.categories == categories
+			);
+		setBooks([...bookUpdating]);
 	}
-		j=0;
-}
+};
 
 
+const sortingFunction = () => {
+if (sort == 1) {
+	//rating
+	desc
+		? books.sort((x, y) => y.rate - x.rate)
+		: books.sort((x, y) => x.rate - y.rate);
+} else if (sort == 2) {
+	//price
+	desc
+		? books.sort((x, y) => y.price - x.price)
+		: books.sort((x, y) => x.price - y.price);
+} else if (sort == 3)
+	//alphabet
+
+	desc
+		? books.sort((x, y) => {
+				if (x.title > y.title) return -1;
+				else return 1;
+		  })
+		: books.sort((x, y) => {
+				if (x.title > y.title) return 1;
+				else return -1;
+		  });
+};
 
 
+const AddToCartClick = (title) => {
+	let book = books.filter((e) => e.title == title)[0];
+	if (cartItems.some((e) => e.title == title))
+		setCartItems([...cartItems.filter((e) => e.title != title)]);
+	else setCartItems([book, ...cartItems]);
+};
 
+const cartDelete = (title) => {
+	setCartItems([...cartItems.filter((e) => e.title != title)]);
+};
 
-
-const priceDown=()=>
-{
-	 setBooks([...newBooks])
-	   	 setPageClick(1);
-}
-
-
-const priceUp=()=>
-{
-	 setBooks([...newBooks.reverse()])
-	 setPageClick(1); 
-}
-
-
-
-const CardRate=(title, star)=>
-{
-	
-for (let i=0;i<books.length;i++)
-	{if(books[i].title==title)
-	{ books[i]['rate']=star
-	 setBooks([...books]);
-	 // console.log(books[i] );	
-	}}
-	
-}
-
-
-
-const AddToCartClick=(title)=>
-{
-	let index=books.indexOf(books.filter(el=>el.title==title)[0])
-	books[index].cartAdded=!books[index].cartAdded
-	setBooks([...books])
-}
-
-const cartBooks=()=>
-{
-
-	let addToCart= books.filter(el=>el.cartAdded)
-	setCartItems([...addToCart])
-
-
-}
-
-const cartDelete=(title)=>
-{
-	let index=books.indexOf(books.filter(el=>el.title==title)[0]);
-
-	books[index].cartAdded=false;
-	setBooks([...books]);
-}
-
-const orderClick=()=>
-{
-
-	if(addressAccept) {
-	
-		let a={id:`${orders.length}` , items:cartItems}
-		setOrders([...orders,a])
-		for(let i=0;i<cartItems.length;i++)
-			cartDelete(cartItems[i]['title'])
+const orderClick = () => {
+	if (addressAccept) {
+		let newOrder = { id: `${orders.length}`, items: cartItems };
+		setOrders([...orders, newOrder]);
+		setCartItems([]);
 	}
-	// console.log(orders)
+};
+
+const deleteLiked = (title) => {
+	let array = [...likedCard];
+	array = array.filter((e) => e.title != title);
+	setLikedCard([...array]);
+};
+
+const totalPriceCalc = () => {
+	let priceCalc = 0;
+	if (cartItems.length > 0) {
+		cartItems.forEach((el) => (priceCalc += el.price));
+		setTotalPrice(priceCalc);
+	}
+};
+
+const pageCount = () => {
+	let pageArray = [...new Array(Math.ceil(books.length / 6))];
+	pageArray.forEach((el) => pageArray.indexOf(el));
+	setPage([...pageArray]);
+};
+
+	useEffect(() => {
+		searchFunction();
+	}, [searchInput, categories, sort, desc]);
+
+	useEffect(() => {
+		sortingFunction();
+	}, [sort, categories, desc, books]);
+
+	useEffect(() => {
+		setBooksInPage(
+			books.filter(
+				(a, i) => i >= (pageClick - 1) * 6 && i <= pageClick * 6 - 1
+			)
+		);
+	}, [books, pageClick, searchInput]);
+
+	useEffect(() => {
+		pageCount();
+	}, [books]);
+
+	useEffect(() => {
+		totalPriceCalc();
+	}, [cartItems]);
 
 
+	return (
+		<>
+			<div className="container">
+				<AppContext.Provider
+					value={{
+						books,
+						setBooks,
+						booksInPage,
+						page,
+						setPageClick,
+						AddToCartClick,
+						pageClick,
+						setCartClicked,
+						cartItems,
+						userClicked,
+						registered,
+						values,
+						setUserClicked,
+						cartClicked,
+						orders,
+						orderClick,
+						totalPrice,
+						cartDelete,
+						addressAccept,
+						submitIsError,
+						setSubmitIsError,
+						setRegistered,
+						setAddressAccept,
+						addressInput,
+						setAddressInput,
+						cityInput,
+						setCityInput,
+						searchInput,
+						setSearchInput,
+						about,
+						setAbout,
+						categories,
+						setCategories,
+						categoriesClicked,
+						setCategoriesClicked,
+						sort,
+						setSort,
+						sortClicked,
+						setSortClicked,
+						desc,
+						setDesc,
+						categoryArray,
+						sortArray,
+						allBooks,
+						isLoaded,
+						likedCard,
+						setLikedCard,
+						likesClicked,
+						setLikesClicked,
+						deleteLiked,
+						setDarkMode,
+						darkMode,
+						logo
+					}}
+				>
+					<Header />
+					
+					<Routes>
+						<Route path="/react-bookshop/" element={<Home />} />;
+						<Route path="/react-bookshop/aboutbook" element={<AboutBook />} />;
+						<Route path="/react-bookshop/orders" element={<Orders orders={orders} />} />;
+						<Route path="/react-bookshop/notifications" element={<Notifications nots={nots} setNots={setNots} />}/>;
+						<Route path="/react-bookshop/support" element={<Support />} />;
+						<Route path="/react-bookshop/settings" element={<Settings />} />;
+						<Route path="*" element={<NotFound />} />;
+					</Routes>
+				</AppContext.Provider>
+			</div>
+		</>
+	);
 }
-
-
-useEffect(()=>
-{
-
-let price=0;
-if(cartItems.length>0)
-{
-	for(let i=0;i<cartItems.length;i++)
-		price=price+cartItems[i].price;
-	setTotalPrice(price)
-	// console.log(totalPrice)
-}
-
-
-},[books,cartItems]);
-
-
-useEffect(()=>{
- cartBooks();
-setBooksInPage(books.filter((book)=> books.indexOf(book)>=((pageClick-1)*6) && books.indexOf(book)<= pageClick*6-1 ));
-},[books, pageClick ]);
-
-
-
-useEffect(()=>{
-for(let i=0;i<submitIsError.length;i++)
-	values[i]=null
-setValues([...values])
-// console.log(values)
-},[])
-
-useEffect(()=>{
- i=1;
-	 let pages=[0];
-	while(i<Math.ceil(books.length/6))
-	{ pages.push(i);
-		 i++;}
-		 setPage([...pages])
-},[]);
-
-
-  return (
-  	<>
-
-  <Link to="/react-bookshop/"  className="link"><h1>BookShop</h1> </Link>
-<div className="container" >  
-
-
-<AppContext.Provider 
-	value={{books,
-			CardRate,
-			priceDown,
-			booksInPage,
-			priceUp,
-			page,
-			setPageClick,
-			AddToCartClick,
-			pageClick,
-			setCartClicked,
-			cartItems,
-			userClicked,
-			registered,
-			values,
-			setUserClicked,
-			cartClicked,
-			orders,
-			orderClick,
-			totalPrice,
-			cartDelete,
-			addressAccept
-
-}}>
-<Header />
-
-<Routes >
-
-<Route path='/react-bookshop/' exact  element={ <Home/> }/>
-<Route path='/react-bookshop/orders' exact element={ <Orders orders={orders} /> }/>
-<Route path='/react-bookshop/notifications' exact element={ <Notifications nots={nots} setNots={setNots} /> }/>
-<Route path='/react-bookshop/support' exact element={ <Support/> }/>
-<Route path='/react-bookshop/settings' exact element={ <Settings 	addressAccept={addressAccept} 	setAddressAccept={setAddressAccept} 
-																	registered={registered} 		setRegistered={setRegistered}
-																	 submitIsError={submitIsError} 	setSubmitIsError={setSubmitIsError} 
-																	 values={values } 				setValues={setValues}
-																	 addressInput={addressInput} 	setAddressInput={setAddressInput}  
-																	 cityInput={cityInput} 			setCityInput={setCityInput} /> }/>
-</Routes>
-</AppContext.Provider>
-</div>
-</>
-  );}
-
 
 export default App;

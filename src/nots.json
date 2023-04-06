@@ -1,0 +1,12 @@
+[	{
+		"id":1,
+		"author":"BookShop",
+		"title":"Thanks for using our service. If you don't like something write to us in Support",
+		"unread":true
+	},
+	{
+		"id":2,
+		"author":"BookShop",
+		"title":"Welcome to BookShop",
+		"unread":false
+	 }]

@@ -1,19 +1,22 @@
 import {AppContext} from "../App"
 import Card from '../components/Card'
-import {useContext , useState} from 'react'
+import {useContext } from 'react'
+import SortingPart from '../components/SortingPart'
+import Bestsellers from '../components/Bestsellers'
+import {TbPlayerTrackNextFilled as ToLast , TbPlayerTrackPrevFilled as ToFirst} from 'react-icons/tb'
+
 
 const Home=()=>
 {
 
-const [btnClicked, setBtnClicked]=useState(0)
 
 const {books,
-			CardRate,
-			priceDown,
+			categoryArray,
 			booksInPage,
-			priceUp,
 			page,
 			setPageClick,
+			categories,
+			
 			pageClick } =useContext(AppContext)
 
 
@@ -21,15 +24,10 @@ return(
 
 <>
 
-{btnClicked==1 ?  
-<button onClick={()=>{priceDown() ; setBtnClicked(1)} } style={{backgroundColor:'red'}} >Price ▲</button> : 
-<button onClick={()=>{priceDown() ; setBtnClicked(1)} } style={{backgroundColor:'white'}}>Price ▲</button> }
 
-{btnClicked==2 ?  
-<button onClick={()=>{priceUp() ; setBtnClicked(2)}} style={{backgroundColor:'red'}}>Price ▼</button>:
-<button onClick={()=>{priceUp() ; setBtnClicked(2)}} style={{backgroundColor:'white'}}>Price ▼</button>}
+<SortingPart/>
 
-
+<h1 style={{color:'var(--Dark)' }} > {categoryArray[categories]} </h1>
 <div className="books">
 
 {booksInPage.map((book)=>{
@@ -40,34 +38,27 @@ return(
 				imageUrl={book.imageUrl}
 				author={book.author}
 				price={book.price}
-				CardRate={CardRate}
 				rate={book.rate}
-				cartAdded={book.cartAdded}
 			 />)
-					 })
-
-}
-
-
+					 })}
+ 
 </div>
+ 
 
-
-
-{page.length>1&&
-
-	page.map((i)=>{
-		
-			return(page.indexOf(i)+1==pageClick? <button  key={page.indexOf(i)+1} onClick={()=> {    setPageClick(page.indexOf(i)+1) }} style={{backgroundColor:"red"}} > {page.indexOf(i)+1} </button>
-
-		:
-
-		 <button  key={page.indexOf(i)+1} onClick={()=> {    setPageClick(page.indexOf(i)+1) }} style={{backgroundColor:"white"}} > {page.indexOf(i)+1} </button>)
-		
-	
-
-
-	})
+{page.length>1&&<div className='pagination'>
+{page.length>2 && <ToFirst className='prevLastBtn' onClick={()=>setPageClick(1)}/>}
+	{page.map((item,i)=>{
+			
+				return( <button className={'pageBtn '+`${i+1==pageClick &&'pageBtnClicked'}`} key={i+1} onClick={()=> setPageClick(i+1)}> {i+1} </button>)
+			})}
+{page.length>2 && <ToLast className='prevLastBtn' onClick={()=>setPageClick(page.length)}/>}
+</div>
 }
+
+{Bestsellers(10)}
+
+
+
 </>)}
 
 export default Home

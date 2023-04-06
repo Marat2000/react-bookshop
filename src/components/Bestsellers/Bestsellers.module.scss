@@ -1,0 +1,74 @@
+.image
+{
+	height:12rem;
+	width:calc( 8rem - 2px );
+	border-radius: .5rem;
+	border:var(--Pink) 1px solid;
+	transition:.2s;
+	&:hover
+	{
+		transform:translateY(-.2rem);
+		box-shadow:var(--Dark) 0 2px 1rem ;
+	}
+}
+
+.container
+{
+	width: 100%;
+	display: flex;
+	transition: .3s ease-in-out;
+	justify-content: space-between;
+}
+
+.container *
+{
+	margin-right: .5rem;
+}
+
+.slider
+{
+	width: 92%;
+	overflow: hidden;
+	margin-right: auto;
+	margin-left:auto;
+	background-image: linear-gradient(90deg,var(--White),var(--Light),var(--White));
+	padding: .5rem;
+}
+
+.link
+{
+	margin:0;
+}
+
+.all
+{
+	border-top:var(--Grey) 1px solid;
+}
+
+.sliderButtons
+{
+	width:100%;
+	display: grid;
+    grid-template-columns: .1fr 2fr .1fr;
+    justify-content: center;
+    align-items:center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.leftButton , .rightButton
+{
+	margin:0;
+	color:var(--Pink);
+	width:3rem;
+	height:3rem;
+	border-radius:50%;
+	&:active
+	{
+		background-color:var(--Pink);
+		color:var(--White);
+	}
+
+}
+

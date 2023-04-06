@@ -1,5 +1,6 @@
 import {BiLocationPlus} from 'react-icons/bi'
 import {useState , useEffect} from 'react'
+import style from './Address.module.scss'
 
 const Address=(props)=>
 {
@@ -71,30 +72,30 @@ const accept=()=>
 }
 
 return(<>
-<hr style={{marginTop:'1rem'}} />
-	<h3  className='headTitle'><BiLocationPlus/> Delivery Address</h3>
+
+	<h3  className={style.headTitle}><BiLocationPlus/> Delivery Address</h3>
 	
 	{props.addressAccept ? 
 		<>
-		<h3>Address accepted.  You can order!</h3>
-		<h3><i> { cityInput}, {addressInput}</i> </h3>
+		<h3 className={style.text}>Address accepted.  You can order!</h3>
+		<h3 className={style.yourAddress}><i> { cityInput}, {addressInput}</i> </h3>
 		</>
 
-		:<div className='addressForm'>
-			<div className="cityInput" >
-				<div className="settingsInputArea  " >	
+		:<div className={style.addressForm}>
+			<div className={style.cityInput} >
+				<div className={style.settingsInputArea} >	
 			<input placeholder="City" value={cityInput}  onChange={e=>{ cityInputArea(e) }} />
 				</div>
-			{cityError && <div style={{color:'red' , width:'100%' , marginLeft:'1rem'}} > Not possible to send an order to this city</div>	}
+			{cityError && <div className={style.error} > Not possible to send an order to this city</div>	}
 	</div>
-		<div className="addressInput" >
-		<div className="settingsInputArea  ">	
+		<div className={style.addressInput} >
+		<div className={style.settingsInputArea}>	
 			<input placeholder="Address"  value={addressInput} onChange={e=> setAddressInput(e.target.value)  } />	
 				</div>
-			{ addressError && <div style={{color:'red' , width:'100%' , marginLeft:'1rem'}} >Cannot be blank</div>}
+			{ addressError && <div className={style.error} >Cannot be blank</div>}
 				</div>
 	
-					 {openCities &&<><ul className='cityList'>
+					 {openCities &&<><ul className={style.cityList}>
 								{(arrCity.filter(item=>String(item).toLowerCase().includes(String(cityInput).toLowerCase() ))).map((el)=>{return(
 									<li key={el} onClick={()=> listItemClick(el)}>{el}</li>
 				
@@ -111,9 +112,9 @@ return(<>
 
 
 			{props.addressAccept ?
-				<button className="submitBtn" style={{ width:'100%'}} onClick={()=> props.setAddressAccept(false)}  >Change</button> 
+				<button className={style.submitBtn} onClick={()=> props.setAddressAccept(false)}  >Change</button> 
 				:
-				<button className="submitBtn" style={{ width:'100%'}} onClick={ accept}  >Submit</button>}
+				<button className={style.submitBtn} onClick={ accept}  >Submit</button>}
 
 </>)}
 

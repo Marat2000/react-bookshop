@@ -1,0 +1,136 @@
+ 
+.header
+{
+	text-align: right;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom:1rem;
+	border-bottom: 1px solid var(--Dark);
+	color:var(--Dark);
+	align-items: flex-start;
+
+}
+
+
+.cartCount
+{
+	display: block;
+	background-color:var(--Pink);
+	border-radius: 50%;
+	color: var(--White);
+	font-weight: bold;
+	width: 1rem;
+	position: absolute;
+	right: 5.6rem;
+	top:0.6rem;
+	display: grid;
+	place-items:center;
+	font-size: .8rem;
+	height: 1rem;
+}
+
+.likeCount
+{
+	display: block;
+    border-radius: 50%;
+    color: var(--Light);
+    font-weight: bold;
+    width: 1rem;
+    position: absolute;
+    right: 3.85rem;
+    top: 1.35rem;
+    display: grid;
+    place-items: center;
+    font-size: 0.8rem;
+    height: 1rem;
+
+}
+
+.fullHeart
+{
+	width: 1.5rem;
+	height: 1.5rem;
+
+}
+
+
+
+.headerIcon 
+{
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-right:1rem;
+	
+	&:hover
+	{
+	cursor: pointer;
+	opacity: .6;
+	}
+}
+
+
+
+.headerIconUser 
+{
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-right:1rem;
+	margin-right:0;
+	
+	&:hover
+	{
+	cursor: pointer;
+	opacity: .6;
+	}
+}
+
+
+
+.logo
+{
+	width: 2rem;
+	height: 2rem;
+	rotate:20deg;
+
+
+}
+
+.logoShop
+{
+	transform:translate(2.4rem , -.5rem);
+	@media(max-width:31rem)
+	{
+		transform:translate(1.44rem , -.3rem);
+	}
+}
+
+
+.logoContainer
+{
+	display: flex;
+	color:var(--Grey);
+	text-decoration: none;
+	color:var(--Pink);
+	font-size:1rem;
+
+	*
+	{
+		margin:0;
+	}
+	@media(max-width:31rem)
+	{
+		display:grid;
+		font-size:.6rem;
+	}
+}
+.rightPart
+{
+	display:flex;
+	align-items:center;
+}
+
+.headerPrice
+{
+	color:var(--Pink);
+	font-weight:bold;
+}

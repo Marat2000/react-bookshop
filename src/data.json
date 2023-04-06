@@ -1,0 +1,343 @@
+[
+
+
+{"id":"1",
+"darkMode":true
+},
+{
+"id":"2",
+"items":[
+
+
+{"imageUrl":"assets/books/book1.jpg", 
+"title":"I Don't Need Therapy",  
+"author":"Toni Lodge",
+"price":34.87,
+"rate":3,
+"about":"A hilarious memoir of home truths and whatever the opposite of 'that girl energy' is, from one half of the hit podcast Toni and Ryan. \n \n Most of us tell little white lies all the time. Whether it's 'I'm five minutes away' or 'It must have gone to my spam folder', most of these fibs are harmless. But what if you realised that you weren't just lying about the little things, but the big 'life' stuff too? \n \n When Toni Lodge sat down to write this memoir, she realised that the lies she was telling herself were hiding some pretty important home truths-about her work, her identity and her mental health. Her dogged pursuit of these truths sent her on a brazen exploration of everything from gastro, fame and Twilight to funerals, the Dalai Lama and Brazilian waxes. \n \n In this hilarious warm hug of a book, Toni exposes the lies she has told herself about who she is and what she is capable of, inviting us on a riotous romp that will make you laugh, cringe, cry and utterly rethink the truth behind the stories we tell ourselves.",
+"pages":256,
+"language":"English",
+"categories":1,
+"sales":100
+},
+
+{"imageUrl":"assets/books/book2.jpg", 
+"title":"Atomic Habitsy",  
+"author":"James Clear",
+"price":29.22,
+"rate":4,
+"about":"THE PHENOMENAL INTERNATIONAL BESTSELLER: OVER 1O MILLION COPIES SOLD WORLDWIDE \n \n Transform your life with tiny changes in behaviour, starting now. \n \n People think that when you want to change your life, you need to think big. But world-renowned habits expert James Clear has discovered another way. He knows that real change comes from the compound effect of hundreds of small decisions: doing two push-ups a day, waking up five minutes early, or holding a single short phone call. \n \n He calls them atomic habits. \n \n In this ground-breaking book, Clears reveals exactly how these minuscule changes can grow into such life-altering outcomes. He uncovers a handful of simple life hacks (the forgotten art of Habit Stacking, the unexpected power of the Two Minute Rule, or the trick to entering the Goldilocks Zone), and delves into cutting-edge psychology and neuroscience to explain why they matter. Along the way, he tells inspiring stories of Olympic gold medalists, leading CEOs, and distinguished scientists who have used the science of tiny habits to stay productive, motivated, and happy. \n \n These small changes will have a revolutionary effect on your career, your relationships, and your life. \n \n A NEW YORK TIMES AND SUNDAY TIMES BESTSELLER \n \n 'A supremely practical and useful book.' Mark Manson, author of The Subtle Art of Not Giving A F*ck \n \n 'James Clear has spent years honing the art and studying the science of habits. This engaging, hands-on book is the guide you need to break bad routines and make good ones.' Adam Grant, author of Originals \n \n 'Atomic Habits is a step-by-step manual for changing routines.' Books of the Month, Financial Times \n \n 'A special book that will change how you approach your day and live your life.' Ryan Holiday, author of The Obstacle is the Way", 
+"pages":320,
+"language":"English",
+"categories":2,
+"sales":250
+},
+
+{"imageUrl":"assets/books/book3.jpg", 
+"title":"Things We Hide From The Light",  
+"author":"Lucy Score",
+"price":20.10,
+"rate":2,
+"about":"THE INSTANT SUNDAY TIMES BESTSELLER \n \n THE #1 NEW YORK TIMES BESTSELLER \n \n THE HIGHLY ANTICIPATED FOLLOW-UP TO TIKTOK SENSATION AND MILLION-COPY BESTSELLER THINGS WE NEVER GOT OVER \n \n Police Chief Nash Morgan is known for two things: being a good guy and the way his uniform accentuates his rear end. \n \n But two bullets put a dent in his Southern charm and now he's facing a criminal still on the loose and a town full of citizens that consider the law more of a 'guideline'. The last thing he needs is the leggy, smart-mouthed Lina Solavita moving in next door, making him feel things he doesn't have the energy to feel. \n \n Lina is on a mission. As soon as she gets what she's after, she has no intention of sticking around. The town of Knockemout has other ideas. Soon she finds herself sucked into small-town life. Dog-sitting. Saying yes to a bridesmaid's dress. Listening to the sexy chief of police in the shower. \n \n But when Nash discovers Lina's secret these friends become furious enemies - though the sparks flying between them don't know the difference between love and hate. \n \n Already itching for more from Knockemout? Pre order Things We Left Behind now - the next heart-pounding book in the bestselling series!" ,
+"pages":592,
+"language":"English",
+"categories":3,
+"sales":48
+},
+
+{"imageUrl":"assets/books/book4.jpg", 
+"title":"How to Paint Without a Brush",  
+"author":"Red Hong Yi",
+"price":40.45,
+"rate":1,
+"about":"From an internationally acclaimed artist and social media force, a visually captivating showcase of art made from everyday objects-including tea bags, flower petals, and eggshells-with several do-it-yourself projectsHow to Paint Without a Brush introduces artist Red Hong Yi's creative process-the tools and methods she employs and the motivation behind the artist's work. Organized by artistic medium, including eggshells, matchsticks, flowers, and ink stamps made from vegetables, Red's book shares an array of creative techniques as well as stories from significant moments in her art career. A do-it-yourself section at the back of the book provides several projects that readers can try at home to push their own creative boundaries.With its focus on non-traditional art-making methods using common household objects, this book is both timely and inspiring. By combining years of artistic experimentation with Red Hong Yi's personal journey, How to Paint Without a Brush will capture the interests of people from all skill levels-from the casual hobbyist to the emerging artist-in contemporary art making.",
+"pages":240,
+"language":"English",	
+"categories":4,
+"sales":76
+},
+
+{"imageUrl":"assets/books/book5.jpg", 
+"title":"The Letters I Will Never Send",  
+"author":"Isabella Dorta",
+"price":18.85,
+"rate":5,
+"about":"'these letters thus far have remained unsent, i want you to change that for me.' \n \n Embrace honesty and heal beautifully. \n \n In the letters i will never send, TikTok poet Isabella Dorta urges you to leave nothing unsaid and take comfort in moving poems on love, heartbreak, mental health and self-discovery. \n \n With beautiful line illustrations and over 100 poems written in the form of confessional letters addressed to the most influential figures in your life: \n \n Your younger self \n \n Your future self \n \n Your lover \n \n Your body \n \n Your family \n \n and more \n \n Take the ultimate step. Read, rip out, burn or send the letters out into the world. Write your own and share them with the people in your life. Just don't hold back!",
+"pages":240,
+"language":"English",
+"categories":5,
+"sales":153
+},
+
+
+{"imageUrl":"assets/books/book6.jpg", 
+"title":"Me vs Brain",  
+"author":"Hayley Morris",
+"price":24.96,
+"rate":3,
+"about":"THE SUNDAY TIMES BESTSELLER. ORDER THE HILARIOUS BOOK FROM TIKTOK AND INSTA SENSATION HAYLEY MORRIS, NOW! \n \n 'An insightful, intimate account of modren life that is a joy to read, with shades of Dolly Alderton's Everything I Know About Love.' - Scarlett Sangster, iNews \n \n  Brain: We left the oven on! \n \n Me: No don't say that, I've not got time for this! \n \n Brain: The house is probably on fire! \n \n Me: Stop it, I need to write this book description. \n \n Brain: But the blazing fire. \n \n Me: We didn't even use the oven today. \n \n Brain: But what if - \n \n Me: No. We're not doing this, I'm finishing this description. \n \n  Hello there! Hayley Morris here. Or you might know me as the Brain Girl, and don't be fooled...it's not because I'm outrageously smart. Just an avid overthinker. I'm on a mission to prove once and for all that You. Are. Normal. Running through imaginary arguments whilst showering, hiding your knickers in the nurse's office before they look directly into your vagina, or not knowing how to be a normal human when you have the plumber over. I've spent the majority of my life saying and doing embarrassing things that wake me up in a cold sweat at 3am as my Brain reminds me of every minor detail. \n \n  In this book, I've overthought absolutely everything so you don't have to. I'll be talking about everything from dating to discharge, mental health to menstrual cups. I might not be able to banish your anxiety or make you feel 100% comfortable in your skin, but I hope I can at least give you a break from the constant brain chatter and we can rejoice and laugh at how similar we actually all are. \n \n  DON'T OVERTHINK IT. ORDER NOW. \n \n  'Hilarious...I absolutely loved this book! I almost wet myself from laughing!' Dr Amir Khan",
+"pages":304,
+"language":"English",
+"categories":2,
+"sales":204
+},
+
+{"imageUrl":"assets/books/book7.jpg", 
+"title":"The Body Keeps the Score",  
+"author":"Bessel van der Kolk",
+"price":25.22,
+"rate":4,
+"about":"A pioneering researcher and one of the world's foremost experts on traumatic stress offers a bold new paradigm for healing \n \n Trauma is a fact of life. Veterans and their families deal with the painful aftermath of combat; one in five Americans has been molested; one in four grew up with alcoholics; one in three couples have engaged in physical violence. Such experiences inevitably leave traces on minds, emotions, and even on biology. Sadly, trauma sufferers frequently pass on their stress to their partners and children. \n \n Renowned trauma expert Bessel van der Kolk has spent over three decades working with survivors. In The Body Keeps the Score, he transforms our understanding of traumatic stress, revealing how it literally rearranges the brain's wiring--specifically areas dedicated to pleasure, engagement, control, and trust. He shows how these areas can be reactivated through innovative treatments including neurofeedback, mindfulness techniques, play, yoga, and other therapies. Based on Dr. van der Kolk's own research and that of other leading specialists, The Body Keeps the Score offers proven alternatives to drugs and talk therapy--and a way to reclaim lives.",
+"pages":464,
+"language":"English",
+"categories":2,
+"sales":435
+},
+
+
+
+
+{"imageUrl":"assets/books/book8.jpg", 
+"title":"Cleopatra and Frankenstein",  
+"author":"Coco Mellors",
+"price":21.84,
+"rate":2,
+"about":"For readers of Modern Lovers and Conversations with Friends, an addictive, humorous, and poignant debut novel about the shock waves caused by one couple's impulsive marriage. \n \n \n \n 'A tender, devastating and funny exploration of love and friendship and the yearning for self-evisceration. Coco Mellors is an elegant and exciting new voice' PANDORA SYKES, author of How Do We Know We're Doing It Right \n \n \n \n New York is slipping from Cleo's grasp. Sure, she's at a different party every other night, but she barely knows anyone. Her student visa is running out, and she doesn't even have money for cigarettes. But then she meets Frank. Twenty years older, Frank's life is full of all the success and excess that Cleo's lacks. He offers her the chance to be happy, the freedom to paint, and the opportunity to apply for a green card. She offers him a life imbued with beauty and art-and, hopefully, a reason to cut back on his drinking. He is everything she needs right now. \n \n Cleo and Frank run head-first into a romance that neither of them can quite keep up with. It reshapes their lives and the lives of those around them, whether that's Cleo's best friend struggling to embrace his gender identity in the wake of her marriage, or Frank's financially dependent sister arranging sugar daddy dates after being cut off. Ultimately, this chance meeting between two strangers outside of a New Year's Eve party changes everything, for better or worse. \n \n Cleopatra and Frankenstein is an astounding and painfully relatable debut novel about the spontaneous decisions that shape our entire lives and those imperfect relationships born of unexpectedly perfect evenings.",
+"pages":384,
+"language":"English",
+"categories":2,
+"sales":432
+},
+
+
+{"imageUrl":"assets/books/book9.jpg", 
+"title":"Of Cabbages and Kimchi",  
+"author":"James Read",
+"price":36.88,
+"rate":3,
+"about":" A playful and accessible guide to fermenting at home \n \n James Read is on a mission to smuggle bacteria into our kitchens. In Of Cabbages & Kimchi, he takes the ten greatest 'living' ferments - fermented foods that are neither cooked nor pasteurized - and places them under the microscope, before cooking with them in all their delicious versatility. \n \n From the fiery funk of kimchi to the velvet tang of kefir, James describes the microbial process, then shares his recipes for recreating these wonders in your own kitchen - no specialist equipment required. Alongside his recipes, James investigates the extraordinary cultural and historic backgrounds of fermented foods, exploring how the microbes that bring them to life have developed alongside our culinary evolution. \n \n Featuring over fifty recipes - including Mushroom and Sauerkraut Pierogi, Chilled Radish Noodle Soup and Green Chilli Fermented Salsa - and packed to the brim with Marija Tiurina's gastro-surrealist watercolour illustrations, Of Cabbages and Kimchi will help you create, understand and appreciate fermentation's bubbling magic.", 
+"pages":240,
+"language":"English",
+"categories":6,
+"sales":680
+},
+
+
+{"imageUrl":"assets/books/book10.jpg", 
+"title":"A Day of Fallen Night",  
+"author":"Samantha Shannon",
+"price":47.00,
+"rate":5,
+"about":"**THE NUMBER ONE BESTSELLER** \n \n 'A magnificent, sweeping epic' JENNIFER SAINT, Sunday Times-bestselling author of ARIADNE \n \n 'Shannon is simply a master of the genre' C. S. PACAT, New York Times-bestselling author of DARK RISE \n \n 'A tremendous triumph' LONDON SHAH, award-winning author of the LIGHT OF THE ABYSS series \n \n 'A gorgeous, glittering epic' DAILY MAIL \n \n \n \n A return to the world of Samantha Shannon's Sunday Times and New York Times-bestselling The Priory of the Orange Tree \n \n \n \n Tunuva Melim is a sister of the Priory. For fifty years, she has trained to slay wyrms - but none have appeared since the Nameless One, and the younger generation is starting to question the Priory's purpose. \n \n To the north, in the Queendom of Inys, Sabran the Ambitious has married the new King of Hroth, narrowly saving both realms from ruin. Their daughter, Glorian, trails in their shadow - exactly where she wants to be. \n \n The dragons of the East have slept for centuries. Dumai has spent her life in a Seiikinese mountain temple, trying to wake the gods from their long slumber. Now someone from her mother's past is coming to upend her fate. \n \n When the Dreadmount erupts, bringing with it an age of terror and violence, these women must find the strength to protect humankind from a devastating threat. \n \n Intricate and epic, A Day of Fallen Night sweeps readers back to the world of A Priory of the Orange Tree, showing us a course of events that shaped it for generations to come. \n \n **Chosen as a book of 2023 by the Metro, Cosmopolitan, Nerd Daily, PinkNews and Waterstones**",
+"pages":880,
+"language":"English",
+"categories":7,
+"sales":850
+},
+
+{"imageUrl":"assets/books/book11.jpg", 
+"title":"Drama Free",  
+"author":"Nedra Glover Tawwab",
+"price":22.62,
+"rate":1,
+"about":"From the bestselling author of SET BOUNDARIES, FIND PEACE, a road map for understanding and moving past family struggles - and living your life, your way. \n \n Every family has a story. For some of us, our family of origin is a solid foundation that feeds our confidence and helps us navigate life's challenges. For others, it's a source of pain, hurt, and conflict that can feel like a lifelong burden. In this empowering guide, licensed therapist and bestselling relationship expert Nedra Glover Tawwab offers clear advice for identifying dysfunctional family patterns and choosing the best path to breaking the cycle and moving forward. \n \n Covering topics ranging from the trauma of emotional neglect, to the legacy of addicted or absent parents, to mental health struggles in siblings and other relatives, and more, this clear and compassionate guide will help you take control of your own life - and honour the person you truly are.",
+"pages":288,
+"language":"English",
+"categories":2,
+"sales":900
+},
+
+{"imageUrl":"assets/books/book12.jpg", 
+"title":"The Glucose Goddess Method",  
+"author":"Jessie Inchauspe",
+"price":25.08,
+"rate":4,
+"about":"From #1 internationally bestselling author of Glucose Revolution, a four-week, four-step program for living a healthier, happier life with balanced blood sugar including over 100 recipes, an interactive workbook, and the guidance to make the 'new science of nutrition...practical for everyone' (Robert H. Lustig, MD, MSL, New York Times bestselling author of Fat Chance). \n \n \n \n  Do you suffer from cravings, chronic fatigue, or sugar addiction? Do you sometimes wake up in the morning feeling unable to face the day? Most of the population is stuck on a glucose roller coaster. \n \n In her first book, the instant #1 internationally bestselling Glucose Revolution, Jessie Inchauspé offered a revolutionary framework for healing through science-backed nutrition hacks. Now, in The Glucose Goddess Method, she shares the 'best practical guide for managing glucose to maximize health and longevity' (David Sinclair, PhD, New York Times bestselling author of Lifespan) with this four-week program to incorporating the principles of how to avoid glucose spikes into your everyday life. \n \n Complete with 100 recipes and an interactive workbook, you are guided through four simple, science-proven ways to steady your blood sugar, gaining boundless energy, curbing your cravings, clearing your skin, slowing your ageing process, and sleeping better than you ever have before. You will create positive new habits for life. The best part? You won't be counting calories and can still eat all the foods you love.",
+"pages":288,
+"language":"English",
+"categories":6,
+"sales":200
+},
+
+{"imageUrl":"assets/books/book13.jpg", 
+"title":"The Invisible String",  
+"author":"Patrice Karst",
+"price":16.14,
+"rate":3,
+"about":"With over a million copies sold, this accessible, bestselling picture book phenomenon about the unbreakable connections between loved ones has healed a generation of readers--children and adults alike--and has been updated with new illustrations and an afterword from the author. Also available: Spanish edition (El hilo invisible) and a companion workbook (The Invisible String Workbook). \n \n \n \n Parents, educators, therapists, and social workers alike have declared The Invisible String the perfect tool for coping with all kinds of separation anxiety, loss, and grief. In this relatable and reassuring contemporary classic, a mother tells her two children that they're all connected by an invisible string. 'That's impossible!' the children insist, but still they want to know more: 'What kind of string?' The answer is the simple truth that binds us all: An Invisible String made of love. Even though you can't see it with your eyes, you can feel it deep in your heart, and know that you are always connected to the ones you love. Does everybody have an Invisible String? How far does it reach? Does it ever go away? This heartwarming picture book for all ages explores questions about the intangible yet unbreakable connections between us, and opens up deeper conversations about love. \n \n Recommended and adopted by parenting blogs, bereavement support groups, hospice centers, foster care and social service agencies, military library services, church groups, and educators, The Invisible String offers a very simple approach to overcoming loneliness, separation, or loss with an imaginative twist that children easily understand and embrace, and delivers a particularly compelling message in today's uncertain times. This special paperback edition includes vibrant new illustrations and an introduction from the author. \n \n 'This book is a beautiful way to begin to try, as parents, to instill in children the impenetrable power of the heart, the energy of love, and the flow that can be felt from the grace in every moment.' --Tony Robbins",
+"pages":8,
+"language":"English",
+"categories":8,
+"sales":102
+},
+{"imageUrl":"assets/books/book14.jpg", 
+"title":"12 Rules for Life",  
+"author":"Jordan B. Peterson",
+"price":22.15,
+"rate":5,
+"about":"The #1 Sunday Times bestseller from 'the most influential public intellectual in the Western world right now' (New York Times) - now in paperback. \n \n \n \n How should we live properly in a world of chaos and uncertainty? \n \n Jordan Peterson has helped millions of people, young and old, men and women, aim at a life of responsibility and meaning. Now he can help you. \n \n Drawing on his own work as a clinical psychologist and on lessons from humanity's oldest myths and stories, Peterson offers twelve profound and realistic principles to live by. After all, as he reminds us, we each have a vital role to play in the unfolding destiny of the world. \n \n Deep, rewarding and enlightening, 12 Rules for Life is a lifeboat built solidly for stormy seas: ancient wisdom applied to our contemporary problems.",
+"pages":448,	
+"language":"English",
+"categories":2,
+"sales":48
+},
+
+{"imageUrl":"assets/books/book15.jpg", 
+"title":"Food for Life",  
+"author":"Tim Spector",
+"price":41.98,
+"rate":3,
+"about":"**AS HEARD ON THE DIARY OF A CEO PODCAST** \n \n \n \n Food is our greatest ally for good health, but the question of what to eat has never seemed so complicated. Bestselling author and top 100 most-cited scientist Tim Spector has the answers in this definitive, easy-to-follow guide to the new science of eating well. \n \n Tim Spector has pioneered a new approach to nutrition, encouraging us to forget misleading calorie counts and nutritional breakdowns. In Food for Life he draws on over a decade of cutting-edge scientific research, along with his own personal insights, to deliver a new and comprehensive approach to what we should all know about food today. \n \n Investigating everything from environmental impact and food fraud to allergies and deceptive labelling, Spector also shows us the many wondrous and surprising properties of everyday foods, which scientists are only just beginning to understand. \n \n Empowering and practical, Food for Life is nothing less than a new approach to how to eat - for our health and the health of the planet. \n \n ** A THE TIMES and SUNDAY TIMES BOOK OF THE YEAR** \n \n 'A rigorously academic book that welcomes the layperson with open arms.' The Times",
+"pages":528,
+"language":"English",
+"categories":6,
+"sales":98
+},
+
+{"imageUrl":"assets/books/book16.jpg", 
+"title":"Heaven Official's Blessing : Tian Guan Ci Fu: Vol 1",  
+"author":"Mo Xiang Tong Xiu",
+"price":25.48,
+"rate":4,
+"about":"Born the crown prince of a prosperous kingdom, Xie Lian was renowned for his beauty, strength, and purity. His years of dedication and noble deeds allowed him to ascend to godhood. But those who rise, can also fall...and fall he does, cast from the Heavens again and again and banished to the mortal realm. \n \n Eight hundred years after his mortal life, Xie Lian has ascended to godhood for the third time. Now only a lowly scrap collector, he is dispatched to wander the earthly realm to take on tasks appointed by the heavens to pay back debts and maintain his divinity. Aided by old friends and foes alike, and graced with the company of a mysterious young man with whom he feels an instant connection, Xie Lian must confront the horrors of his past in order to dispel the curse of his present.",
+"pages":544,
+"language":"English",
+"categories":9,
+"sales":105
+},
+
+{"imageUrl":"assets/books/book17.jpg", 
+"title":"Daisy Jones and The Six",  
+"author":"Taylor Jenkins Reid",
+"price":17.04,
+"rate":4,
+"about":"NOW A SMASH HIT AMAZON PRIME TV STARRING SAM CLAFLIN, RILEY KEOUGH AND CAMILA MORRONE \n \nTHE SUNDAY TIMES AND NEW YORK TIMES BESTSELLER\n \nFrom the author of THE SEVEN HUSBANDS OF EVELYN HUGO and the bestselling MALIBU RISING\n\n'I LOVE it . . . I can't remember the last time I read a book that was so fun' DOLLY ALDERTON\n\nEverybody knows Daisy Jones and the Six.\n\nTheir sound defined an era. Their albums were on every turntable. They sold out arenas from coast to coast.\n\nThen, on 12 July 1979, Daisy Jones walked barefoot onto the stage at Chicago Stadium. And it all came crashing down.\n\nEveryone was there.\n\nEveryone remembers it differently.\n\nNobody knew why they split. Until now . . .\n\n'The verdict: Daisy Jones steals the limelight' STYLIST\n\n'New obsession, incoming' TELEGRAPH\n\n'I didn't want this book to end' FEARNE COTTON\n\n'Utterly believable . . . fantastically enjoyable' THE TIMES\n\n'Pitch perfect' SUNDAY TIMES\n\n'Reads like an addictive Netflix documentary meets A Star Is Born - despite being utterly fictional. It's also a call-to-arms that when you find your niche, don't doubt, embrace it' EMERALD STREET\n\n'Well observed, sensitively told . . . a great read' BBC\n\n'A tremendously engaging, and completely believable tale of rock and roll excess... inventive, persuasive and completely satisfying' DYLAN JONES\n\n'I spent a lost weekend in this book. Daisy Jones is an instant icon' ERIN KELLY\n\n'DAISY JONES & THE SIX is a transporting novel - at once a love story, a glimpse into the combustible inner workings of a rock-and-roll band, and a pitch-perfect recreation of the music scene of the Fleetwood Mac era. You'll never want it to end' CECILIA AHERN\n\n'Once in a blue moon you get to discover a book you end up pressing upon many other people to read. Taylor Jenkins Reid has got every nuance, every detail exact and right. I loved every word' PAUL REES\n\n'So brilliantly written I thought all the characters were real . . . I couldn't put it down' EDITH BOWMAN\n\n'Explosive . . . a gorgeous novel and a ravishing read' SUNDAY EXPRESS\n\n'The characters leap off the page, seducing you with their dramas, and making you wish the band was real' HEAT\n\n'The heady haze of the 70s music scene, and a perfectly flawed Daisy, combine to create a fresh, rock n roll read. I loved it' ALI LAND, author of Good Me Bad Me",
+"pages":432,
+"language":"English",
+"categories":3,
+"sales":80
+},
+
+{"imageUrl":"assets/books/book18.jpg", 
+"title":"It Ends With Us: The most heartbreaking novel you'll ever read : The most heartbreaking novel you'll ever read",  
+"author":"Colleen Hoover",
+"price":15.23,
+"rate":4,
+"about":"A brave and heartbreaking novel that digs its claws into you and doesn't let go, long after you've finished it' Anna Todd, author of the After series 'A glorious and touching read, a forever keeper' USA Today 'Will break your heart while filling you with hope' Sarah Pekkanen, Perfect Neighbors SOMETIMES THE ONE WHO LOVES YOU IS THE ONE WHO HURTS YOU THE MOST. Lily hasn't always had it easy, but that's never stopped her from working hard for the life she wants. She's come a long way from the small town in Maine where she grew up - she graduated from college, moved to Boston, and started her own business. So when she feels a spark with a gorgeous neurosurgeon named Ryle Kincaid, everything in Lily's life suddenly seems almost too good to be true. Ryle is assertive, stubborn, maybe even a little arrogant. He's also sensitive, brilliant, and has a total soft spot for Lily, but Ryle's complete aversion to relationships is disturbing. Even as Lily finds herself becoming the exception to his 'no dating' rule, she can't help but wonder what made him that way in the first place. As questions about her new relationship overwhelm her, so do thoughts of Atlas Corrigan - her first love and a link to the past she left behind. He was her kindred spirit, her protector. When Atlas suddenly reappears, everything Lily has built with Ryle is threatened. With this bold and deeply personal novel, It Ends With Us is a heart-wrenching story and an unforgettable tale of love that comes at the ultimate price.",
+"pages":384,
+"language":"English",
+"categories":3,
+"sales":105
+},
+
+{"imageUrl":"assets/books/book19.jpg", 
+"title":"The Love Hypothesis",  
+"author":"Ali Hazelwood",
+"price":14.71,
+"rate":4,
+"about":"Based on the available information and the data hitherto collected, my hypothesis is that the further I stay away from love, the better off I will be.\n\n'Contemporary romance's unicorn: the elusive marriage of deeply brainy and delightfully escapist.' Christina Lauren, New York Times bestselling author of The Unhoneymooners\n\n*\n\nWhen a fake relationship between scientists meets the irresistible force of attraction, it throws one woman's carefully calculated theories on love into chaos.\n\nAs a third-year Ph.D. candidate, Olive Smith doesn't believe in lasting romantic relationships but her best friend does, and that's what got her into this situation. Convincing Anh that Olive on her way to a happily ever after was always going to be tough, scientists require proof. So, like any self-respecting woman, Olive panics and kisses the first man she sees.\n\nThat man is none other than Adam Carlsen, a young hotshot professor and well-known ass. Which is why Olive is positively floored when he agrees to keep her charade a secret and be her fake boyfriend. But when a big science conference goes haywire and Adam surprises her again with his unyielding support (and his unyielding abs), their little experiment feels dangerously close to combustion.\n\nOlive soon discovers that the only thing more complicated than a hypothesis on love is putting her own heart under the microscope.\n\nWhat the five star reviews are saying about The Love Hypothesis:\n'Did I read this in 24 hours? Yes.'\n'Funny. Snarky. Intelligent. Real.'\n'If you're even slightly thinking about getting this book to read, just go a head and do it'\n'Adam is just *swoon*'\n'Ali Hazelwood has made herself an auto-buy author'\n'It was just... perfect.'\n'A heroine you will instantly fall in love with'\n\nAli Hazelwood's latest novel, Love on the Brain is out now.",
+"pages":384,
+"language":"English",
+"categories":3,
+"sales":215
+},
+
+{"imageUrl":"assets/books/book20.jpg", 
+"title":"Seven Husbands of Evelyn Hugo : The Sunday Times Bestseller",  
+"author":"Taylor Jenkins Reid",
+"price":16.23,
+"rate":4,
+"about":"THE SUNDAY TIMES BESTSELLER AND TIKTOK SENSATION \nSOON TO BE A NETFLIX FILM\n\n'Riveting, heart-wrenching and full of Old Hollywood glamour' BuzzFeed\n'This wildly addictive journey of a reclusive Hollywood starlet and her tumultuous Tinseltown journey comes with unexpected twists and the most satisfying of drama' PopSugar\n\nFrom the author of Daisy Jones & The Six in which a legendary film actress reflects on her relentless rise to the top and the risks she took, the loves she lost, and the long-held secrets the public could never imagine.\n\nAging and reclusive Hollywood movie icon Evelyn Hugo is finally ready to tell the truth about her glamorous and scandalous life. But when she chooses unknown magazine reporter Monique Grant for the job, no one is more astounded than Monique herself. Why her? Why now?\n\nMonique is not exactly on top of the world. Her husband has left her, and her professional life is going nowhere. Regardless of why Evelyn has selected her to write her biography, Monique is determined to use this opportunity to jumpstart her career.\n\nSummoned to Evelyn’s luxurious apartment, Monique listens in fascination as the actress tells her story. From making her way to Los Angeles in the 1950s to her decision to leave show business in the '80s, and, of course, the seven husbands along the way, Evelyn unspools a tale of ruthless ambition, unexpected friendship, and a great forbidden love. Monique begins to feel a very real connection to the legendary star, but as Evelyn’s story near its conclusion, it becomes clear that her life intersects with Monique’s own in tragic and irreversible ways.\n\nThe Seven Husbands of Evelyn Hugo is a mesmerizing journey through the splendour of old Hollywood into the harsh realities of the present day as two women struggle with what it means and what it costs to face the truth.",
+"pages":400,
+"language":"English",
+"categories":3,
+"sales":300
+},
+
+{"imageUrl":"assets/books/book21.jpg", 
+"title":"Verity : The thriller that will capture your heart and blow your mind",  
+"author":"Colleen Hoover",
+"price":15.30,
+"rate":4,
+"about":"OVER 3 MILLION COPIES SOLD - THE NO.1 BESTSELLER AND TIKTOK SENSATION, FROM THE AUTHOR OF IT ENDS WITH US\nAre you ready to stay up all night? Rebecca meets Gone Girl in this shocking, unpredictable thriller with a twist that will leave you reeling . . .\n\nLowen Ashleigh is a struggling writer on the brink of financial ruin when she accepts the job offer of a lifetime. Jeremy Crawford, husband of bestselling author Verity Crawford, has hired Lowen to complete the remaining books in a successful series his injured wife is unable to finish.\n\nLowen arrives at the Crawford home, ready to sort through years of Verity's notes and outlines, hoping to find enough material to get her started. What Lowen doesn't expect to uncover in the chaotic office is an unfinished autobiography Verity never intended for anyone to read. Page after page of bone-chilling admissions, including Verity's recollection of the night their family was forever altered.\n\nLowen decides to keep the manuscript hidden from Jeremy, knowing its contents would devastate the already-grieving father. But as Lowen's feelings for Jeremy begin to intensify, she recognizes all the ways she could benefit if he were to read his wife's words. After all, no matter how devoted Jeremy is to his injured wife, a truth this horrifying would make it impossible for him to continue loving her . . .\n\nIf you loved Verity, don't miss the special collector's edition golden hardback coming this autumn, including an exclusive never-before-seen final chapter. Available to order now.\n\n500,000 READERS HAVE ALREADY GIVEN VERITY FIVE STARS\n'One of the best thrillers I have ever read' *****\n\n'Powerful, mind-blowing and emotional' *****\n\n'The plot twists and that ending came out of nowhere' *****\n\n'There are no words. Bravo' *****\n\n'Dark, creepy, and one hundred per cent original' *****\n\n'I NEEDED to know how this was going to end' *****\n\n'Left me completely speechless' *****\n\nVERITY was a No.1 Kindle bestseller on 18.03.22",
+"pages":336,
+"language":"English",
+"categories":10,
+"sales":420
+},
+
+{"imageUrl":"assets/books/book22.jpg", 
+"title":"Where the Crawdads Sing",  
+"author":"Delia Owens",
+"price":15.48,
+"rate":5,
+"about":"OVER 3 MILLION COPIES SOLD - THE NO.1 BESTSELLER AND TIKTOK SENSATION, FROM THE AUTHOR OF IT ENDS WITH US\nAre you ready to stay up all night? Rebecca meets Gone Girl in this shocking, unpredictable thriller with a twist that will leave you reeling . . .\n\nLowen Ashleigh is a struggling writer on the brink of financial ruin when she accepts the job offer of a lifetime. Jeremy Crawford, husband of bestselling author Verity Crawford, has hired Lowen to complete the remaining books in a successful series his injured wife is unable to finish.\n\nLowen arrives at the Crawford home, ready to sort through years of Verity's notes and outlines, hoping to find enough material to get her started. What Lowen doesn't expect to uncover in the chaotic office is an unfinished autobiography Verity never intended for anyone to read. Page after page of bone-chilling admissions, including Verity's recollection of the night their family was forever altered.\n\nLowen decides to keep the manuscript hidden from Jeremy, knowing its contents would devastate the already-grieving father. But as Lowen's feelings for Jeremy begin to intensify, she recognizes all the ways she could benefit if he were to read his wife's words. After all, no matter how devoted Jeremy is to his injured wife, a truth this horrifying would make it impossible for him to continue loving her . . .\n\nIf you loved Verity, don't miss the special collector's edition golden hardback coming this autumn, including an exclusive never-before-seen final chapter. Available to order now.\n\n500,000 READERS HAVE ALREADY GIVEN VERITY FIVE STARS\n'One of the best thrillers I have ever read' *****\n\n'Powerful, mind-blowing and emotional' *****\n\n'The plot twists and that ending came out of nowhere' *****\n\n'There are no words. Bravo' *****\n\n'Dark, creepy, and one hundred per cent original' *****\n\n'I NEEDED to know how this was going to end' *****\n\n'Left me completely speechless' *****\n\nVERITY was a No.1 Kindle bestseller on 18.03.22",
+"pages":384,
+"language":"English",
+"categories":10,
+"sales":800
+},
+
+{"imageUrl":"assets/books/book23.jpg", 
+"title":"The Secret History : From the Pulitzer Prize-winning author of The Goldfinch",  
+"author":"Donna Tartt",
+"price":19.82,
+"rate":4,
+"about":"THE BESTSELLER THAT DEFINED AN AGE\n\n'Everything, somehow, fit together; some sly and benevolent Providence was revealing itself by degrees and I felt myself trembling on the brink of a fabulous discovery, as though any morning it was all going to come together---my future, my past, the whole of my life---and I was going to sit up in bed like a thunderbolt and say oh! oh! oh!'\n\nUnder the influence of a charismatic classics professor, a group of clever, eccentric misfits at a New England college discover a way of thought and life a world away from their banal contemporaries. But their search for the transcendent leads them down a dangerous path, beyond human constructs of morality.\n\n'Haunting, compelling and brilliant' The Times\n\n'Irresistible and seductive' Guardian\n\n'Enthralling... Forceful, cerebral and impeccably controlled' New York Times",
+"pages":640,
+"language":"English",
+"categories":10,
+"sales":800
+},
+
+{"imageUrl":"assets/books/book24.jpg", 
+"title":"The Husband's Secret : The multi-million copy bestseller that launched the author of HBO's Big Little Lies",  
+"author":"Liane Moriarty",
+"price":17.16,
+"rate":4,
+"about":"His terrible secret. Her life-shattering choice . . . Discover the enthralling story of secrets, family, and the danger of the truth from the bestselling author of HBO sensation BIG LITTLE LIES\n\n'Another masterclass from the author of Big Little Lies' GRAZIA\n_________\n\nCecilia thought she knew her husband.\n\nThat is until she finds an envelope with 'to be opened in the event of my death' written in his hand. Unable to resist temptation, she opens it, and learns a shocking truth he has never dared reveal.\n\nNow Cecilia faces a terrible choice.\n\nBecause revealing her husband's secret will hurt those she loves the most . . .\n\nBut could the consequences of staying silent be worse?\n_________\n\n'A staggeringly brilliant novel. It is literally unputdownable' SOPHIE HANNAH\n\n'Finely wrought tension holds up until the final page' TELEGRAPH\n\n'A tense, page-turning story which gradually draws everyone together in a devastating climax' MAIL ON SUNDAY\n\n'Dark and compelling . . . a must read' SUN",
+"pages":432,
+"language":"English",
+"categories":10,
+"sales":356
+},
+
+{"imageUrl":"assets/books/book25.jpg", 
+"title":"Big Little Lies : The No.1 bestseller behind the award-winning TV series",  
+"author":"Liane Moriarty",
+"price":17.10,
+"rate":4,
+"about":"DISCOVER THE GRIPPING NO. 1 BESTSELLER BEHIND THE AWARD WINNING HBO SENSATION STARRING REESE WITHERSPOON, NICOLE KIDMAN & MERYL STREEP\n________\n\nPerfect families, perfect houses, perfect lives.\nThree mothers, Jane, Madeline and Celeste appear to have it all, until they find out just how easy it is for one little lie to spiral out of control . . .\n\nSingle mum Jane has just moved to town. She's got her little boy in tow - plus a secret she's been carrying for five years.\n\nOn the first day of the school run she meets Madeline - a force to be reckoned with, who remembers everything and forgives no one - and Celeste, the kind of beautiful woman who makes the world stop and stare, but is inexplicably ill at ease.\n\nThey both take Jane under their wing - while careful to keep their own secrets under wraps.\n\nBut a minor incident involving the children of all three women rapidly escalates: playground whispers become spiteful rumours until no one can tell the truth from the lies . . .\n\nIt was always going to end in tears, but how did it end in murder?\n________\n\n'Blame and guilt, forgiveness and retribution, love and betrayal. A tense, page-turning story . . . a great read' Mail on Sunday\n\n'Blending romance, comedy and mystery, this is a wonderful book - full of brains, guts and heart' Sunday Mirror\n\n'A hell of a good book. Funny and scary' Stephen King\n\n'Brilliant, standout, superbly clever. Moriarty writes vividly, wittily and wickedly' Sunday Express",
+"pages":496,
+"language":"English",
+"categories":3,
+"sales":600
+},
+
+{"imageUrl":"assets/books/book26.jpg", 
+"title":"Tomie: Complete Deluxe Edition",  
+"author":"Junji Ito",
+"price":46.06,
+"rate":4,
+"about":"The complete classic horror series, now available in a single deluxe volume. Murdered again and again, one girl always comes back for more... Tomie Kawakami is a femme fatale with long black hair and a beauty mark just under her left eye. She can seduce nearly any man, and drive them to murder as well, even though the victim is often Tomie herself. While one lover seeks to keep her for himself, another grows terrified of the immortal succubus. But soon they realize no matter how many times they kill her, the world will never be free of Tomie.",
+"pages":752,
+"language":"English",
+"categories":9,
+"sales":752
+},
+
+{"imageUrl":"assets/books/book27.jpg", 
+"title":"Berserk Deluxe Volume 1",  
+"author":"Kentaro Miura",
+"price":72.70,
+"rate":5,
+"about":"Have you got the Guts? Kentaro Miura's Berserk has outraged, horrified, and delighted manga and anime fanatics since 1989, creating an international legion of hardcore devotees and inspiring a plethora of TV series, feature films, and video games. And now the badass champion of adult fantasy manga is presented in an oversized 7 x 10 deluxe hardcover edition, nearly 700 pages amassing the first three Berserk volumes, with following volumes to come to serve up the entire series in handsome bookshelf collections. No Guts, no glory!\n\nHave you got the Guts? Kentaro Miura's Berserk has outraged, horrified, and delighted manga and anime fanatics since 1989, creating an international legion of hardcore devotees and inspiring a plethora of TV series, feature films, and video games. And now the badass champion of adult fantasy manga is presented in an oversized 7 x 10 deluxe hardcover edition, nearly 700 pages amassing the first three Berserk volumes, with following volumes to come to serve up the entire series in handsome bookshelf collections. No Guts, no glory!",
+"pages":696,
+"language":"English",
+"categories":9,
+"sales":1500
+}
+
+
+
+]}]

@@ -1,0 +1,80 @@
+.headTitle
+{
+	display: flex;
+	align-items: center;
+	letter-spacing: .1rem;
+	color:var(--Dark);
+	border-bottom: 1px solid var(--Grey);
+	padding-bottom: 1rem;
+}
+
+ 
+
+
+.notification
+{
+	border-radius: .5rem;
+	border:1px var(--Grey) solid;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;	
+	align-items: center;
+	margin-bottom: .6rem;
+&:hover
+{
+	cursor: pointer;
+	transform: translateY(-.1rem);
+	box-shadow: rgba(0,0,0,.1) 0rem 0rem 2rem;
+	transition: .2s;
+}
+
+div
+{
+	 display: flex;
+	justify-content: space-between;	
+	align-items: center;
+}
+
+}
+
+
+.notText
+{
+	padding-right: .5rem; 
+	color:var(--Pink);
+	font-weight: bold;
+
+p
+{
+	font-size: 1.2rem;
+	letter-spacing: 0.05rem;
+	color:var(--Dark);
+}
+
+}
+
+.redPoint
+{
+	color: red;
+	font-size: 2rem;
+	position:absolute;
+}
+
+.notDelete
+{
+	font-size: 1.5rem;
+	margin-left: .5rem;
+	font-weight: bold;
+	height:  3rem;
+	width: 2rem;
+	display: grid;
+	place-items:center;
+	color:var(--Dark);
+
+	&:hover
+	{
+	opacity: .6;
+	}
+
+}
+

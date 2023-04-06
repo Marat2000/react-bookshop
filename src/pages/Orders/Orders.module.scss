@@ -1,0 +1,73 @@
+.headTitle
+{
+	display: flex;
+	align-items: center;
+	letter-spacing: .1rem;
+	color:var(--Dark);
+	border-bottom: 1px solid var(--Grey);
+	padding-bottom: 1rem;
+} 
+
+.container
+{
+	border:1px solid var(--Grey) ;
+	 border-radius:1rem ;
+	 margin-bottom:.8rem ;
+	 padding:1rem ;
+}
+
+.orderNumber
+{
+	margin:0 ;
+	 border-bottom:3px var(--Grey) double;
+	 color:var(--Dark);
+}
+
+.books
+{
+	display:flex; 
+	flex-wrap:wrap;
+}
+
+.card
+{
+	width:6rem ;
+	 height:14rem ;
+	 margin-right:.95rem;
+	 margin-top:.5rem;
+	 text-align: center;
+}
+
+.image
+{
+	width:6rem ;
+	 height:9rem ;
+	 border-radius:.5rem ;
+	 border:1px var(--Grey) solid;
+}
+
+.title
+{
+	font-size:.9rem;
+	 font-weight:bold ;
+	 line-height:1rem;
+	 color:var(--Pink);
+}
+
+.author
+{
+	font-size:.7rem;
+	 letter-spacing:.08rem ;
+	 opacity:.7 ;
+	 text-transform:uppercase ;
+	 font-weight:bold;
+	 color:var(--Dark);
+
+}
+
+.noOrder
+{
+	margin-bottom:1rem ;
+	 font-weight:bold;
+	 color:var(--Pink);
+}

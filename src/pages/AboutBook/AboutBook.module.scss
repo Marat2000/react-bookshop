@@ -1,0 +1,202 @@
+.container
+{
+	display: grid;
+	grid-template-columns: .4fr 1fr;
+	place-items:center;
+	color:var(--Dark);
+
+	@media(max-width: 24rem)
+	{
+		grid-template-columns: none;
+		grid-template-rows: 1fr 1fr;
+
+	}
+
+	
+}
+
+.containerOpen
+{
+
+	display:grid;
+	align-content: center;
+	color:var(--Dark);
+}
+
+.image
+{
+	width:10rem;
+	height: 17rem;
+	margin: 1rem;
+	border-radius: .5rem;
+	border:var(--Grey) solid 1px;
+	order:1;
+
+
+@media(max-width: 38rem)
+{
+
+
+
+	width: 9rem;
+	height: 14rem;
+}
+
+}
+
+
+.info
+{
+	font-weight: bold;
+	color: var(--Pink);
+	margin-right:.5rem;
+
+}
+
+.title
+{
+	font-size: 1.5rem;
+	font-weight: bold;
+	color:var(--Pink);
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	text-align: center;
+	
+}
+
+.rate
+{
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	width: 8rem;
+	color:var(--Dark);
+	font-size: 2rem;
+}
+
+.rate *:hover
+{
+	opacity: 1;
+	cursor: unset;
+}
+
+.text
+{
+	margin: 1rem;
+	display: grid;
+	line-height:1.3rem;
+
+		@media(max-width: 24rem)
+	{
+		place-items:center;
+
+	}
+
+
+
+}
+
+.about
+{
+	height: 8rem;
+	overflow-y: hidden;
+	margin-top: 1rem;
+	white-space: pre-line;
+	font-family: inherit;
+	margin-bottom: 0;
+
+}
+
+.aboutOpen
+{
+	overflow-y: none;
+	height: auto;
+	margin-top: 1rem;
+	white-space: pre-line;
+	font-family: inherit;
+
+
+
+
+}
+
+.viewall
+{
+	font-weight: bold;
+	font-size: .9rem;
+	cursor: pointer;
+	margin-right: 0;
+	margin-left: auto;
+	letter-spacing: .2rem;
+	color: var(--Pink);
+	
+
+}
+
+.viewallText
+{
+	text-decoration: underline;
+}
+
+.link
+{
+	text-decoration: none;
+}
+
+
+
+.buttons
+{
+	display: grid;
+	height: auto;
+	margin-top: .5rem;
+	order:2;
+
+ button
+{
+	border-radius: 3rem;
+	border:var(--Pink) 2px solid;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	text-decoration: none;
+	color:var(--Pink) ;
+	height: 2rem;
+	transition: .2s;
+
+}
+
+
+
+}
+
+
+.cartButtonClicked
+{
+	background-color: var(--Pink);
+	color: var(--White) !important;
+}
+
+
+.imageButtons
+{
+	display: grid;
+}
+
+.shareIcons
+{
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	gap:16px;
+	filter: invert(40%) sepia(95%) saturate(3701%) hue-rotate(326deg) brightness(101%) contrast(96%);
+	width: 10rem;
+}
+
+
+
+
+

@@ -1,0 +1,180 @@
+
+
+
+.categoriesSearch
+{
+
+	margin-top:2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: var(--Grey) 1px solid;
+	padding-bottom: 1rem;
+	color:var(--Dark);
+	align-items:flex-start;
+
+	@media(max-width:31rem)
+	{
+		display:grid;
+	}
+}
+
+.categoriesPart
+{
+	width: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-weight: bold;
+	color:var(--Dark);
+}
+
+.categoriesPart *
+{
+	margin-right: .6rem;
+	cursor: pointer;
+}
+
+.desc
+{
+	display:flex;
+	
+}
+
+
+.buttons
+{
+	display: flex;
+	flex-wrap: wrap;
+	gap:10px;
+	align-items:center;
+	@media(max-width:51rem)
+	{
+		display:grid;
+	}
+
+}
+
+
+
+
+.categoriesButton , .sortButton
+{
+	width: 9rem;
+
+	@media(max-width:51rem)
+	{
+		
+		width: 100%;
+	}
+}
+
+
+
+.categories
+{
+	list-style: none;
+	padding: 0;
+	padding: 1rem;
+	width: 50%;
+	background-color: var(--White);
+	border-radius: 1rem;
+	border:1px var(--Grey) solid; 
+	width:auto;
+	position: absolute;
+	z-index: 100;
+	top: 9rem;
+	left: 1rem;
+		
+li
+{
+
+border-bottom: 1px solid var(--Grey);
+width:auto;
+
+}
+
+
+@media(max-width:51rem)
+{
+	top:8.5rem;
+	
+}
+
+
+}
+
+
+.sort
+{
+	list-style: none;
+	padding: 0;
+	padding: 1rem;
+	width: 50%;
+	background-color: var(--White);
+	border-radius: 1rem;
+	border:1px var(--Grey) solid; 
+	width:auto;
+	position: absolute;
+	z-index: 100;
+	top: 9rem;
+	left: 12rem;
+		
+li
+{
+
+border-bottom: 1px solid var(--Grey);
+width:auto;
+
+}
+
+@media(max-width:51rem)
+{
+	top:10rem;
+	left:1rem;
+}
+
+
+}
+
+.searchInput
+{
+	box-sizing: border-box;
+	border:none;
+	background-color: transparent;	
+	outline:none;
+	width: 90%;
+	font-size:1rem;
+	color:var(--Pink);
+
+}
+
+.clearSearch
+{
+	cursor: pointer; 
+}
+
+.search
+{
+	border-radius:2rem;
+	height: 2rem;
+	border:var(--Dark) solid 1px; 
+	
+
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+	padding-right:.3rem; 
+	padding-left: .1rem;
+	width: 30%;
+	justify-content: space-between;
+	
+	@media(max-width:31rem)
+	{
+		width: 60vw;
+	}
+
+}
+
+
+
