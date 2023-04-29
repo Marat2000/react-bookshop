@@ -19,7 +19,6 @@ window.scrollTo(0,0)
 const {id}=useParams<string>()
 const index:number=Number(id)
 let shareIcons=['assets/shareIcons/icon-facebook.svg' ,  'assets/shareIcons/icon-instagram.svg' , 'assets/shareIcons/icon-pinterest.svg'  ]	
-console.log(index)
 
 const dispatch=useDispatch()
 
@@ -35,7 +34,6 @@ const AddToCartClick = (title:string) => {
 	else dispatch (setCartItems([book, ...cartItems]));
 };
 
-console.log(index+1)
 
 if( allBooks[index] )	{
 let isCartAdded:boolean=cartItems.some(e=>e.title==allBooks[index].title)
