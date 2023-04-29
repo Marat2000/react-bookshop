@@ -1,41 +1,45 @@
-import {useContext} from 'react'
+import { useState , useEffect} from 'react'
 import User from '.././User'
 import Drawer from '.././Drawer'
 import {BiUserCircle, BiCartAlt , BiHeart} from 'react-icons/bi'
 import {AiFillHeart as FullHeart} from 'react-icons/ai'
-import {AppContext} from '../../App'
 import {Link} from 'react-router-dom'
 import style from './Header.module.scss'
 import Likes from '.././Likes'
+import logo from '../../logo.png'
+import {useSelector} from 'react-redux'
+import {RootState} from '../../redux/store'
+import {Book} from '../../redux/slices/bookSlice'
 
 
-const Header=()=>
+const Header:React.FC<{
+	likedCard:Book[] ,
+	setLikedCard:React.Dispatch<React.SetStateAction<Book[]>>}
+	>=({likedCard , setLikedCard})=>
 {
 
-const {
-setCartClicked,
-cartItems,
-userClicked,
-registered,
-values,
-setUserClicked,
-cartClicked,
-orders,
-orderClick,
-totalPrice,
-addressAccept,
-likedCard,
-setLikedCard,
-likesClicked,
-setLikesClicked,
-deleteLiked,
-setAbout,
-books,
-darkMode,
-setDarkMode,
-logo,
 
-cartDelete}=useContext(AppContext)
+
+	const [cartClicked, setCartClicked] = useState(false)
+	const [userClicked, setUserClicked] = useState(false)
+	const [likesClicked, setLikesClicked] = useState(false)
+	const [totalPrice, setTotalPrice] = useState<number>(0);
+	const {cartItems}=useSelector((state:RootState)=>state.cart)
+
+	useEffect(() => {
+
+		const totalPriceCalc = () => {
+			let priceCalc = 0;
+			if (cartItems.length > 0) {
+				cartItems.forEach((el) => (priceCalc += el.price));
+				setTotalPrice(priceCalc);
+			}
+		};
+		totalPriceCalc();
+
+	}, [cartItems]);
+
+
 
 
 return (<>
@@ -69,36 +73,15 @@ return (<>
 }
 <BiUserCircle onClick={()=>setUserClicked(!userClicked)} className={style.headerIconUser}/>
 </div>	
-{userClicked && <>	<User 	
-							registered={registered} 
-							firstName={values[0]}
-							 lastName={values[1]}
-							 darkMode={darkMode}
-							setDarkMode={setDarkMode}
-							 setUserClicked={setUserClicked}/> 
-							 <div className="overBar"  onClick={()=>setUserClicked(false)} ></div> 
+{userClicked && <>	<User setUserClicked={setUserClicked}/> 
+ <div className="overBar"  onClick={()=>setUserClicked(false)} ></div> 
 							 </>}
 
-{cartClicked && <>	<Drawer 
-							setCartClicked={setCartClicked}
-							addressAccept={addressAccept}
-							orders={orders} 
-							orderClick={orderClick}  
-							totalPrice={totalPrice} 
-							cartItems={cartItems} 
-							setAbout={setAbout}
-							books={books}
-							cartDelete={cartDelete} /> <div 
-							className="overBar"  onClick={()=>setCartClicked(false)} ></div> 
+{cartClicked && <>	<Drawer setCartClicked={setCartClicked}  totalPrice={totalPrice} /> <div 
+className="overBar"  onClick={()=>setCartClicked(false)} ></div> 
 							</>}
 
-{likesClicked && <>	<Likes 	deleteLiked={deleteLiked}
-							likedCard={likedCard}
-							setLikedCard={setLikedCard}
-							setAbout={setAbout}
-							books={books}
-							setLikesClicked={setLikesClicked}
-							 /> <div 
+{likesClicked && <>	<Likes setLikesClicked={setLikesClicked} likedCard={likedCard} setLikedCard={setLikedCard}/> <div 
 							className="overBar"  onClick={()=>setLikesClicked(false)} ></div> 
 							</>}
 </div>

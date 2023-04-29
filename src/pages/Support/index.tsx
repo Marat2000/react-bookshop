@@ -20,6 +20,9 @@ const sentBtn=()=>
 		
 }
 
+const onTextAreaChange=(i:React.ChangeEvent<HTMLTextAreaElement>)=>{
+	setAreaHeight(i.target.scrollHeight/17 ); 
+	setMessage(i.target.value) }
 
  
 
@@ -30,7 +33,7 @@ return(
 	<div className={style.support}>
 		<textarea  placeholder=". . ." className={style.supportText}
 			value={message}  style={{height:`${areaHeight }rem`}}
-			onChange={e=>{setAreaHeight(e.target.scrollHeight/17 ); setMessage(e.target.value) }} />
+			onChange={onTextAreaChange} />
 
 		<button className={sent?style.supportSentBtn:style.supportSendBtn} onClick={sentBtn} >{sent? 'Sent!': 'Send ►'}</button>
 	</div>

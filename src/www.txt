@@ -1,0 +1,25 @@
+index.tsx 		v
+app 			v
+bookSlice	 	v
+cartSlice		v
+filterSlce		v
+settinglice		v
+store			v
+AboutBook		v
+notifications	v
+orders			v
+settings		v
+supprt 			v
+home			v
+notfound		V
+
+address			v	
+bestsellers		v
+card			v
+drawer			v
+header			v
+likes			v
+sortingpart		v
+user			v
+mainlayout		v
+
