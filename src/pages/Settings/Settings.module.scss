@@ -47,6 +47,9 @@
 	padding-left: 1rem;
 	color:var(--Dark);
 	font-weight: bold;
+	@media(max-width:33rem){
+		width: 85vw;
+	}
 }
 
 @media(max-width:33rem)
@@ -74,12 +77,19 @@
 		margin-left:1rem;
 	}
 
-	@media(max-width:20rem)
+	@media(max-width:23rem)
 	{
 		font-size:.6rem;
 		letter-spacing: .05rem;
 
 	}
+	@media(max-width:18rem)
+	{
+		font-size:.5rem;
+		letter-spacing: .05rem;
+
+	}
+	
 	
 
 }

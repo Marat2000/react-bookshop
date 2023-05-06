@@ -3,7 +3,7 @@ import Address from '../.././components/Address'
 import style from './Settings.module.scss'
 import {setValues , setRegistered , setInputIsError , selectSetting } from '../../redux/slices/settingSlice'
 import {useDispatch , useSelector} from 'react-redux'
-import {useEffect} from 'react'
+import {useEffect, useRef} from 'react'
 
  
 
@@ -13,6 +13,7 @@ const Settings=()=>
 
 const {values , registered , inputIsError } = useSelector(selectSetting)
 const dispatch=useDispatch()
+
 
 const nameSubmit=(i:React.ChangeEvent<HTMLInputElement>,n:number)=>
 {
@@ -95,26 +96,26 @@ useEffect(()=>{
 		<div className={style.settings}>
 
 
-			<div className={style.settingsInputArea}>	
+			<div className={style.settingsInputArea} >	
 				<input placeholder="First Name" value={values[0]}  onChange={e=>nameSubmit(e, 0)} />	
 				{inputIsError[0] &&	<span className={style.errorText}> Looks like this is not an First Name </span>}
 			</div>
 		
 		
-			<div className={style.settingsInputArea}>	
-				<input placeholder="Last Name" value={values[1]} onChange={e=>nameSubmit(e,1)} />		
+			<div className={style.settingsInputArea} >	
+				<input placeholder="Last Name" value={values[1]}  onChange={e=>nameSubmit(e,1)} />		
 				{inputIsError[1] &&	<span className={style.errorText}> Looks like this is not an Last Name </span>}
 			</div>
 		
 		
-			<div className={style.settingsInputArea}>	
+			<div className={style.settingsInputArea} >	
 				<input placeholder="Email Address" value={values[2]} onChange={mailSubmit}/>	
 				{inputIsError[2] &&	<span className={style.errorText}> Looks like this is not an Email Address </span>}
 			</div>
 		
 		
-			<div className={style.settingsInputArea}>	
-				<input placeholder="Password" value={values[3]}  onChange={passwordSubmit} type="password"/>		
+			<div className={style.settingsInputArea} >	
+				<input placeholder="Password" value={values[3]} onChange={passwordSubmit} type="password"/>		
 				{inputIsError[3] &&	<span className={style.errorText}> The Password should be between 8-12 letters </span>}
 			</div>
 		
